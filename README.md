@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://pbs.twimg.com/media/DQl3AJ1WsAEwl_C.jpg"/><br>
+</p>
+
 # Libft - General purpose library
 
 ## Goals
