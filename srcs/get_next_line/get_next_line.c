@@ -6,12 +6,12 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 14:09:17 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/17 15:37:48 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 22:04:48 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "string.h"
-#include "get_next_line.h"
+#include "libft/string.h"
+#include "libft/get_next_line.h"
 #include <stdlib.h>
 
 static char		*copy(char *dest, char *str, int *offset)

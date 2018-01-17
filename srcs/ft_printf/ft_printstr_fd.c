@@ -6,10 +6,11 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 16:48:07 by mdeville          #+#    #+#             */
-/*   Updated: 2017/12/15 14:10:29 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 22:01:54 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft/string.h"
 #include "libft/ft_printf.h"
 
 static int	null_case(const int fd, t_token t)

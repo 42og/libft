@@ -6,10 +6,11 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/11 11:32:49 by mdeville          #+#    #+#             */
-/*   Updated: 2017/12/15 14:12:24 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 22:03:33 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft/string.h"
 #include "libft/ft_printf.h"
 
 static int	ft_unistrlen(const wchar_t *str)

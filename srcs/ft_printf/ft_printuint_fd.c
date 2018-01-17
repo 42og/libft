@@ -1,65 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printbin_fd.c                                   :+:      :+:    :+:   */
+/*   ft_printuint_fd.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/07 12:09:17 by mdeville          #+#    #+#             */
-/*   Updated: 2017/12/15 14:06:35 by mdeville         ###   ########.fr       */
+/*   Created: 2017/12/07 09:39:11 by mdeville          #+#    #+#             */
+/*   Updated: 2018/01/17 22:02:46 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft/conversion.h"
+#include "libft/string.h"
 #include "libft/ft_printf.h"
 
-static char			*zero_case(
-						uintmax_t n,
-						char *ascii,
-						int alen,
-						t_token token)
+static char			*zero_case(char *ascii, int alen, t_token token)
 {
 	int		total;
-	int		prefix;
 	char	*res;
 
-	prefix = ft_strchr(token.flags, '#') ? 1 : 0;
-	total = (prefix && n) ? alen + 1 : alen;
-	total = (token.width > total) ? token.width : total;
+	total = (token.width > alen) ? token.width : alen;
 	if (!(res = (char *)malloc(sizeof(char) * (total + 1))))
 		return (NULL);
 	while (total >= 0)
 	{
 		if (alen >= 0)
 			res[total--] = ascii[alen--];
-		else if (n && prefix && total == 1)
-			res[total--] = token.specifier;
 		else
 			res[total--] = '0';
 	}
 	return (res);
 }
 
-static char			*normal_case(
-						uintmax_t n,
-						char *ascii,
-						int alen,
-						t_token token)
+static char			*normal_case(char *ascii, int alen, t_token token)
 {
 	int		total;
-	int		prefix;
 	char	*res;
 
-	prefix = ft_strchr(token.flags, '#') ? 1 : 0;
 	total = (token.precision > alen) ? token.precision : alen;
-	total = (prefix && n) ? total + 2 : total;
 	if (!(res = (char *)malloc(sizeof(char) * (total + 1))))
 		return (NULL);
 	while (total >= 0)
 	{
 		if (alen >= 0)
 			res[total--] = ascii[alen--];
-		else if (n && prefix && total == 1)
-			res[total--] = token.specifier;
 		else
 			res[total--] = '0';
 	}
@@ -79,19 +63,19 @@ static char			*apply_options(
 	else if (token.precision == 1
 		&& !ft_strchr(token.flags, '-')
 		&& ft_strchr(token.flags, '0'))
-		res = zero_case(n, ascii, alen, token);
+		res = zero_case(ascii, alen, token);
 	else
-		res = normal_case(n, ascii, alen, token);
+		res = normal_case(ascii, alen, token);
 	free(ascii);
 	return (res);
 }
 
-static uintmax_t	convert(va_list *ap, t_length length)
+static uintmax_t	convert(va_list *ap, t_length length, char spe)
 {
 	uintmax_t n;
 
 	n = va_arg(*ap, uintmax_t);
-	if (length == l)
+	if (length == l || spe == 'U')
 		n = (unsigned long)n;
 	else if (length == hh)
 		n = (unsigned char)n;
@@ -108,15 +92,15 @@ static uintmax_t	convert(va_list *ap, t_length length)
 	return (n);
 }
 
-int					ft_printbin_fd(const int fd, t_token token, va_list *ap)
+int					ft_printuint_fd(const int fd, t_token token, va_list *ap)
 {
 	uintmax_t	n;
 	int			len;
 	int			cpt;
 	char		*tmp;
 
-	n = convert(ap, token.length);
-	if (!(tmp = ft_utoa_base(n, "01")))
+	n = convert(ap, token.length, token.specifier);
+	if (!(tmp = ft_utoa_base(n, "0123456789")))
 		return (0);
 	if (!(tmp = apply_options(n, tmp, ft_strlen(tmp), token)))
 		return (0);
