@@ -6,11 +6,11 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/20 20:48:46 by mdeville          #+#    #+#             */
-/*   Updated: 2017/12/15 14:16:44 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 15:41:03 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdint.h>
 
 intmax_t	ft_atoimax(const char *str)
 {

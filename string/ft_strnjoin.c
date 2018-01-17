@@ -6,16 +6,19 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 14:45:51 by mdeville          #+#    #+#             */
-/*   Updated: 2017/12/20 11:13:58 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 16:14:42 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/string.h"
 #include <stdarg.h>
 #include <stdlib.h>
 
-#undef MAXARG
-#define MAXARG 100
+#ifndef MAXARG
+
+# define MAXARG 100
+
+#endif
 
 static size_t	get_args(size_t n, va_list *ap, char *bufarg[])
 {

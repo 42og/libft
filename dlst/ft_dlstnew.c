@@ -6,12 +6,13 @@
 /*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 15:11:29 by mdeville          #+#    #+#             */
-/*   Updated: 2017/11/12 20:09:50 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 15:54:17 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
+#include "libft/dlst.h"
+#include "libft/memory.h"
 
 t_dlist	*ft_dlstnew(char const *content, size_t content_size)
 {

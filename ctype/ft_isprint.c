@@ -6,11 +6,9 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/21 14:26:10 by mdeville          #+#    #+#             */
-/*   Updated: 2017/11/06 18:28:00 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 15:44:52 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int		ft_isprint(int c)
 {

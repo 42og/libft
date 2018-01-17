@@ -6,12 +6,13 @@
 /*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 21:51:04 by mdeville          #+#    #+#             */
-/*   Updated: 2017/11/12 20:10:17 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 15:59:25 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
+#include "libft/memory.h"
+#include "libft/rbtree.h"
 
 t_rbnode	*ft_rbnodenew(void const *content, size_t content_size)
 {

@@ -6,13 +6,12 @@
 /*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 18:27:57 by mdeville          #+#    #+#             */
-/*   Updated: 2017/11/07 18:45:25 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 16:22:23 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/lst.h"
 #include <stdlib.h>
-#include <string.h>
 
 void	*ft_lstpop(t_list **alst, size_t *content_size)
 {

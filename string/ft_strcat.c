@@ -6,12 +6,11 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/18 15:54:24 by mdeville          #+#    #+#             */
-/*   Updated: 2017/08/18 16:03:08 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 16:09:25 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include "libft.h"
+#include "libft/string.h"
 
 char	*ft_strcat(char *dest, const char *src)
 {

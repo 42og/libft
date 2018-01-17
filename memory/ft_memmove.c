@@ -6,12 +6,11 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/16 20:18:49 by mdeville          #+#    #+#             */
-/*   Updated: 2017/11/13 18:40:04 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 16:21:00 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include "libft.h"
+#include "libft/memory.h"
 
 static void	cpy_bd(unsigned char *dest, const unsigned char *src, size_t n)
 {

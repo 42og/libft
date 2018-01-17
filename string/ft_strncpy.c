@@ -6,12 +6,11 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/18 15:15:44 by mdeville          #+#    #+#             */
-/*   Updated: 2017/12/22 15:08:51 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 16:13:40 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include "libft.h"
+#include "libft/string.h"
 
 char	*ft_strncpy(char *dest, const char *src, size_t len)
 {

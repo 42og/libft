@@ -6,13 +6,13 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/22 16:15:04 by mdeville          #+#    #+#             */
-/*   Updated: 2017/11/07 17:45:12 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 16:23:26 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <unistd.h>
-#include <string.h>
+#include "libft/ft_io.h"
+#include "libft/string.h"
 
 void	ft_putstr_fd(char const *s, int fd)
 {

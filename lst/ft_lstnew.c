@@ -6,13 +6,13 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/29 16:44:07 by mdeville          #+#    #+#             */
-/*   Updated: 2017/11/12 20:09:35 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 15:51:06 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/lst.h"
+#include "libft/memory.h"
 #include <stdlib.h>
-#include <string.h>
 
 t_list		*ft_lstnew(void const *content, size_t content_size)
 {

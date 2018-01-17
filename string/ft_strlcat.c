@@ -6,12 +6,11 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/18 20:51:25 by mdeville          #+#    #+#             */
-/*   Updated: 2017/11/06 19:27:21 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 16:11:40 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include "libft.h"
+#include "libft/string.h"
 
 static void	ft_concatenate(char *dst, const char *src, size_t dlen, size_t left)
 {

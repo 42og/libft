@@ -6,11 +6,11 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/16 22:48:40 by mdeville          #+#    #+#             */
-/*   Updated: 2017/11/12 15:05:30 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 16:20:29 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft/memory.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

@@ -6,13 +6,12 @@
 /*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 19:50:20 by mdeville          #+#    #+#             */
-/*   Updated: 2017/11/07 20:31:00 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 16:13:49 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <string.h>
-#include "libft.h"
+#include "libft/string.h"
 
 char	*ft_strndup(char const *s, size_t n)
 {

@@ -6,11 +6,11 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/16 14:34:29 by mdeville          #+#    #+#             */
-/*   Updated: 2017/08/16 16:49:50 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 16:20:13 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft/memory.h"
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {

@@ -6,11 +6,9 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/21 14:12:21 by mdeville          #+#    #+#             */
-/*   Updated: 2017/11/12 21:47:56 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 15:44:43 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int		ft_iscntrl(int c)
 {

@@ -6,11 +6,11 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/21 14:12:21 by mdeville          #+#    #+#             */
-/*   Updated: 2017/08/21 14:14:14 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 15:44:32 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/ctype.h"
 
 int		ft_isalnum(int c)
 {

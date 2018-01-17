@@ -6,12 +6,12 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 23:57:49 by mdeville          #+#    #+#             */
-/*   Updated: 2017/11/13 14:29:12 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 16:18:53 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <string.h>
+#include "libft/string.h"
+#include "libft/ctype.h"
 
 int		ft_strncasecmp(const char *s1, const char *s2, size_t n)
 {

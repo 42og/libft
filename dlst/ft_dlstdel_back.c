@@ -6,11 +6,11 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/29 22:06:14 by mdeville          #+#    #+#             */
-/*   Updated: 2017/11/13 15:09:00 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 15:53:24 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/dlst.h"
 #include <stdlib.h>
 
 void	ft_dlstdel_back(t_dlist **alst, void (*del)(void *, size_t))

@@ -6,12 +6,11 @@
 /*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 12:57:32 by mdeville          #+#    #+#             */
-/*   Updated: 2017/11/10 14:54:31 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 16:21:35 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include "libft.h"
+#include "libft/lst.h"
 
 static inline void	ft_trimhead(
 							t_list **alst,

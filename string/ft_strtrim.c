@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/string.h"
 
 static size_t	ft_trimbegin(char const *s)
 {

@@ -6,11 +6,12 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/21 15:23:49 by mdeville          #+#    #+#             */
-/*   Updated: 2017/08/22 20:39:25 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 16:10:48 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/string.h"
+#include "libft/memory.h"
 
 void	ft_strdel(char **as)
 {

@@ -6,11 +6,13 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/07 09:22:25 by mdeville          #+#    #+#             */
-/*   Updated: 2017/12/07 11:12:22 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 15:43:31 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include <stdlib.h>
+#include <stdint.h>
+#include "libft/string.h"
 
 static size_t	ft_nbrlen(uintmax_t n, size_t blen)
 {

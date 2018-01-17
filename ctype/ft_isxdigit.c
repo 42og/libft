@@ -6,11 +6,11 @@
 /*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 21:49:39 by mdeville          #+#    #+#             */
-/*   Updated: 2017/11/12 22:05:39 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 15:45:18 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/ctype.h"
 
 int		ft_isxdigit(int c)
 {

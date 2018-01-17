@@ -6,11 +6,9 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/11 11:02:27 by mdeville          #+#    #+#             */
-/*   Updated: 2017/12/11 18:16:10 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 16:18:03 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "ft_printf.h"
 
 static int	case_4(unsigned int unicode, char *utf8)
 {

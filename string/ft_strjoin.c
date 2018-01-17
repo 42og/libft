@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
+#include "libft/string.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

@@ -6,12 +6,12 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/29 19:01:57 by mdeville          #+#    #+#             */
-/*   Updated: 2017/11/10 00:23:52 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 15:53:39 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
+#include "libft/dlst.h"
 
 void	ft_dlstdelone(t_dlist **alst, void (*del)(void *, size_t))
 {

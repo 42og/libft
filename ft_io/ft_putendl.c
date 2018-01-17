@@ -6,11 +6,11 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/22 15:59:43 by mdeville          #+#    #+#             */
-/*   Updated: 2017/08/22 16:01:41 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 15:56:59 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/ft_io.h"
 
 void	ft_putendl(char const *s)
 {

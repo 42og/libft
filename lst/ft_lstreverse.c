@@ -6,11 +6,11 @@
 /*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 10:57:02 by mdeville          #+#    #+#             */
-/*   Updated: 2017/11/10 11:10:41 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 15:51:31 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/lst.h"
 
 void	ft_lstreverse(t_list **alst)
 {

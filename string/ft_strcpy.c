@@ -6,11 +6,11 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/18 15:07:29 by mdeville          #+#    #+#             */
-/*   Updated: 2017/08/18 16:04:45 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 16:10:28 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft/string.h"
 
 char	*ft_strcpy(char *dest, const char *src)
 {

@@ -6,11 +6,11 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/16 13:01:00 by mdeville          #+#    #+#             */
-/*   Updated: 2017/11/06 19:34:29 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 15:55:29 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/memory.h"
 
 void	ft_bzero(void *s, size_t n)
 {

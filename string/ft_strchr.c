@@ -6,11 +6,11 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/18 22:28:20 by mdeville          #+#    #+#             */
-/*   Updated: 2017/11/06 18:02:01 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 16:09:55 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft/string.h"
 
 char	*ft_strchr(const char *s, int c)
 {

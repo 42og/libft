@@ -6,12 +6,11 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/22 13:22:58 by mdeville          #+#    #+#             */
-/*   Updated: 2017/12/22 14:09:57 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 15:42:17 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
 
 static int	nbrlen(unsigned int n)
 {
