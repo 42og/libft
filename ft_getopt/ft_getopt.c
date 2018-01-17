@@ -6,12 +6,13 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 16:12:49 by mdeville          #+#    #+#             */
-/*   Updated: 2017/12/18 18:47:19 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 16:29:38 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_getopt.h"
-#include "ft_printf.h"
+#include "libft/ft_getopt.h"
+#include "libft/ft_printf.h"
+#include "libft/string.h"
 
 char		*g_optarg = NULL;
 int			g_optind = 1;

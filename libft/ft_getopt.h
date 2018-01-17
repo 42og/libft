@@ -6,14 +6,12 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 16:04:46 by mdeville          #+#    #+#             */
-/*   Updated: 2017/12/18 17:05:46 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/17 16:29:24 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_GETOPT_H
 # define FT_GETOPT_H
-
-# include "libft.h"
 
 extern char	*g_optarg;
 extern int	g_optind;

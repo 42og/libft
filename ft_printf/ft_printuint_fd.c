@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft/ft_printf.h"
 
 static char			*zero_case(char *ascii, int alen, t_token token)
 {

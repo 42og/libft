@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft/ft_printf.h"
 
 static int	null_case(const int fd, t_token t)
 {
