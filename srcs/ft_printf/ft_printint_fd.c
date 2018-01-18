@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/conversion.h"
-#include "libft/string.h"
-#include "libft/ft_printf.h"
+#include "conversion.h"
+#include "ft_string.h"
+#include "ft_printf.h"
 
 static char		*zero_case(intmax_t n, char *ascii, int alen, t_token token)
 {

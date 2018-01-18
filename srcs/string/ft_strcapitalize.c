@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/string.h"
-#include "libft/ctype.h"
+#include "ft_string.h"
+#include "ft_ctype.h"
 
 char	*ft_strcapitalize(char *str)
 {

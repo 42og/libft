@@ -12,7 +12,7 @@
 
 #include <stdlib.h>
 #include <stdint.h>
-#include "libft/string.h"
+#include "ft_string.h"
 
 static size_t	ft_nbrlen(uintmax_t n, size_t blen)
 {

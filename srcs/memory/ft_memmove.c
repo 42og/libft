@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/memory.h"
+#include "memory.h"
 
 static void	cpy_bd(unsigned char *dest, const unsigned char *src, size_t n)
 {

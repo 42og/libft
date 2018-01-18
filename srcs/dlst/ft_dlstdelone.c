@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft/dlst.h"
+#include "dlst.h"
 
 void	ft_dlstdelone(t_dlist **alst, void (*del)(void *, size_t))
 {

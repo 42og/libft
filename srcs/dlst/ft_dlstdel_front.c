@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/dlst.h"
+#include "dlst.h"
 #include <stdlib.h>
 
 void	ft_dlstdel_front(t_dlist **alst, void (*del)(void *, size_t))

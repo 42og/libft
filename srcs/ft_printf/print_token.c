@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/ft_printf.h"
+#include "ft_printf.h"
 
 int		print_token(const int fd, t_token t, va_list *ap, int cpt)
 {

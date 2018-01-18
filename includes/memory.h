@@ -6,14 +6,14 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/17 15:22:32 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/17 15:24:16 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/18 10:45:54 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MEMORY_H
 # define MEMORY_H
 
-#include <unistd.h>
+# include <unistd.h>
 
 void				ft_bzero(void *s, size_t n);
 void				*ft_memalloc(size_t size);

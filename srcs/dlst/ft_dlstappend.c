@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/dlst.h"
+#include "dlst.h"
 
 void	ft_dlstappend(t_dlist **alst, t_dlist *new)
 {

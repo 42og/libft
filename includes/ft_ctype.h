@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ctype.h                                            :+:      :+:    :+:   */
+/*   ft_ctype.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/17 15:06:08 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/17 15:27:58 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/18 11:03:02 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CTYPE_H
-# define CTYPE_H
+#ifndef FT_CTYPE_H
+# define FT_CTYPE_H
 
 int					ft_tolower(int c);
 int					ft_toupper(int c);

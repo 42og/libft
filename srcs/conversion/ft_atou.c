@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printn_fd.c                                     :+:      :+:    :+:   */
+/*   ft_atou.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/07 15:05:48 by mdeville          #+#    #+#             */
-/*   Updated: 2017/12/15 14:09:10 by mdeville         ###   ########.fr       */
+/*   Created: 2018/01/18 12:12:29 by mdeville          #+#    #+#             */
+/*   Updated: 2018/01/18 15:49:59 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-
-void	ft_printn_fd(int n, va_list *ap)
+unsigned int	ft_atou(const char *str)
 {
-	int *res;
+	unsigned int res;
 
-	res = va_arg(*ap, int *);
-	if (!res)
-		return ;
-	*res = n;
+	while ((*str > 8 && *str < 14) || *str == ' ')
+		str++;
+	if (*str == '+')
+		str++;
+	res = 0;
+	while (*str >= '0' && *str <= '9')
+		res = res * 10 + (*str++ - '0');
+	return (res);
 }

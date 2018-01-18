@@ -11,8 +11,8 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft/dlst.h"
-#include "libft/memory.h"
+#include "dlst.h"
+#include "memory.h"
 
 t_dlist	*ft_dlstnew(char const *content, size_t content_size)
 {

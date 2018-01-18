@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/string.h"
-#include "libft/ft_printf.h"
+#include "ft_string.h"
+#include "ft_printf.h"
 
 int		ft_printpercent_fd(const int fd, t_token token)
 {

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/string.h"
+#include "ft_string.h"
 
 static void	ft_concatenate(char *dst, const char *src, size_t dlen, size_t left)
 {

@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/ft_getopt.h"
-#include "libft/ft_printf.h"
-#include "libft/string.h"
+#include "ft_getopt.h"
+#include "ft_printf.h"
+#include "ft_string.h"
 
 char		*g_optarg = NULL;
 int			g_optind = 1;

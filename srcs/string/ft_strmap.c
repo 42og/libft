@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/string.h"
+#include "ft_string.h"
 #include <stdlib.h>
 
 char	*ft_strmap(char const *s, char (*f)(char))

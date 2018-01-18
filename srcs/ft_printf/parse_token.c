@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/conversion.h"
-#include "libft/ft_printf.h"
-#include "libft/string.h"
+#include "conversion.h"
+#include "ft_printf.h"
+#include "ft_string.h"
 #include <stdio.h>
 
 static int	parse_length(const char *s, t_token *token)

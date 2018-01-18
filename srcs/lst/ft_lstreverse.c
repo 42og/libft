@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/lst.h"
+#include "lst.h"
 
 void	ft_lstreverse(t_list **alst)
 {

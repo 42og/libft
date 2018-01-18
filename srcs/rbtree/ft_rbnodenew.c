@@ -11,8 +11,8 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft/memory.h"
-#include "libft/rbtree.h"
+#include "memory.h"
+#include "rbtree.h"
 
 t_rbnode	*ft_rbnodenew(void const *content, size_t content_size)
 {

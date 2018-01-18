@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/dlst.h"
+#include "dlst.h"
 
 static inline void	ft_trimhead(
 								t_dlist **alst,

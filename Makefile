@@ -1,11 +1,12 @@
 NAME=libft.a
 CC=clang
 CFLAGS=-Wall -Wextra -Werror
-INCLUDES=-I./
+INCLUDES=-Iincludes/
 AR=ar
 ARFLAGS=-rcs
 
 SRC = srcs/conversion/ft_atoi.c \
+	srcs/conversion/ft_atou.c \
 	srcs/conversion/ft_atoimax.c \
 	srcs/conversion/ft_itoa.c \
 	srcs/conversion/ft_utoa.c \
@@ -69,6 +70,7 @@ SRC = srcs/conversion/ft_atoi.c \
 	srcs/lst/ft_lstdelone.c \
 	srcs/lst/ft_lstfilter.c \
 	srcs/lst/ft_lstiter.c \
+	srcs/lst/ft_lstlink.c \
 	srcs/lst/ft_lstmap.c \
 	srcs/lst/ft_lstnew.c \
 	srcs/lst/ft_lstpop.c \
@@ -130,16 +132,18 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $(INCLUDES) -o $@ $^
+	@zsh -c "echo -n '\tCompiling $<'"
+	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+	@zsh -c 'echo -e "\r\t\033[32mCompiled $@\033[0m "'
 
 $(NAME): $(OBJ)
-	$(AR) $(ARFLAGS) $(NAME) $(OBJ)
+	@$(AR) $(ARFLAGS) $(NAME) $(OBJ)
 
 clean:
-	rm -rf $(OBJ)
+	@rm -rf $(OBJ)
 
 fclean: clean
-	rm -rf $(NAME)
+	@rm -rf $(NAME)
 
 re: fclean
 	$(MAKE)

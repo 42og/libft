@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/memory.h"
-#include "libft/string.h"
+#include "memory.h"
+#include "ft_string.h"
 
 char	*ft_strnew(size_t size)
 {

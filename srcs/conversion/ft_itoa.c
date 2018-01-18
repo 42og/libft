@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft/string.h"
+#include "ft_string.h"
 
 static size_t	ft_nbrlen(int n)
 {

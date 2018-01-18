@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/string.h"
-#include "libft/conversion.h"
-#include "libft/ft_printf.h"
+#include "ft_string.h"
+#include "conversion.h"
+#include "ft_printf.h"
 
 static char			*zero_case(
 						uintmax_t n,

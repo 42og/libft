@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rbtree.h                                           :+:      :+:    :+:   */
+/*   conversion.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/17 15:19:28 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/17 15:20:50 by mdeville         ###   ########.fr       */
+/*   Created: 2018/01/17 15:24:32 by mdeville          #+#    #+#             */
+/*   Updated: 2018/01/18 12:18:07 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef RBTREE_H
-# define RBTREE_H
+#ifndef CONVERSION_H
+# define CONVERSION_H
 
-#include <unistd.h>
+# include <stdint.h>
 
-enum				e_color {RED, BLACK, NONE};
-
-typedef struct		s_rbnode
-{
-	enum e_color	color;
-	void			*content;
-	size_t			content_size;
-	struct s_rbnode	*left;
-	struct s_rbnode	*right;
-}					t_rbnode;
-
-t_rbnode			*ft_rbnodenew(void const *content, size_t content_size);
+char				*ft_utoa_base(uintmax_t n, const char *base);
+char				*ft_utoa(unsigned int n);
+int					ft_atoi(const char *str);
+unsigned int		ft_atou(const char *str);
+intmax_t			ft_atoimax(const char *str);
+char				*ft_itoa(int n);
 
 #endif

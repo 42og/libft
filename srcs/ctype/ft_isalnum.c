@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/ctype.h"
+#include "ft_ctype.h"
 
 int		ft_isalnum(int c)
 {

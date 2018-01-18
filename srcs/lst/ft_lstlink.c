@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   conversion.h                                       :+:      :+:    :+:   */
+/*   ft_lstlink.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/17 15:24:32 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/17 15:35:13 by mdeville         ###   ########.fr       */
+/*   Created: 2018/01/18 19:09:20 by mdeville          #+#    #+#             */
+/*   Updated: 2018/01/18 19:36:44 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONVERSION_H
-# define CONVERSION_H
+#include <stdlib.h>
+#include "lst.h"
 
-#include <stdint.h>
+t_list	*ft_lstlink(void *content, size_t content_size)
+{
+	t_list *list;
 
-char				*ft_utoa_base(uintmax_t n, const char *base);
-char				*ft_utoa(unsigned int n);
-int					ft_atoi(const char *str);
-intmax_t			ft_atoimax(const char *str);
-char				*ft_itoa(int n);
-
-#endif
+	if (!(list = (t_list *)malloc(sizeof(t_list))))
+		return (NULL);
+	list->next = NULL;
+	list->content_size = (content) ? content_size : 0;
+	list->content = content;
+	return (list);
+}

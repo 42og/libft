@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/string.h"
-#include "libft/memory.h"
+#include "ft_string.h"
+#include "memory.h"
 
 void	ft_strdel(char **as)
 {

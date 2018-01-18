@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/lst.h"
+#include "lst.h"
 #include <stdlib.h>
 
 void	*ft_lstpop(t_list **alst, size_t *content_size)

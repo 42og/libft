@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/ctype.h"
-#include "libft/string.h"
+#include "ft_ctype.h"
+#include "ft_string.h"
 
 int		ft_str_is_alpha(const char *str)
 {

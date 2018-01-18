@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/string.h"
-#include "libft/get_next_line.h"
+#include "ft_string.h"
+#include "get_next_line.h"
 #include <stdlib.h>
 
 static char		*copy(char *dest, char *str, int *offset)
