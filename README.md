@@ -21,3 +21,7 @@ custom implementation if not.
 - A custom function is 25 lines max.
 - A line is 80 columns max.
 - Custom macros shall not have as a primary purpose to bypass the above rules.
+
+## How to Use
+- Add -Ilibft/includes in your compiling options, then you can use headers as if
+they were in the same folder as your .c
