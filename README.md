@@ -1,5 +1,8 @@
 <p align="center">
   <img src="https://pbs.twimg.com/media/DQl3AJ1WsAEwl_C.jpg"/><br>
+  <a href="https://travis-ci.com/iomonad/minishell" title="Build status">
+     <img src="https://travis-ci.org/42og/libft.svg?branch=master">
+  </a>
 </p>
 
 # Libft - General purpose library
