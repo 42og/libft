@@ -1,0 +1,15 @@
+os: osx
+language: c
+script: make
+notifications:
+  slack:
+    secure: FZ1O/oqCqJVwg5DdnNip5USshiCFGy1yuq57Fo0bKHAs5wm8INplyjy6GHOjcdB6LiUzYg3iJDEHh5pc3nt4b1dy2K0f2JO7CvDwW+45ShETFe6QT4vkiE2Wsxhu3qrTjMc6fZUFPHbZ4O9ItPHuuTHAGCZVsNExziVGbGcQggNvreKrIddCaaqTAKM/v9bSGLmsAaQzAbufnLHdpTFHV0S9k9mhlCa8PtRYZvugfDfDzf946z/k6wFew7Qjntkde/SRNiF4mqpWWQLnjg0pWqBV7RWL0VL4aZNPlB/KTH44Nek88dsdOY4P8HtIAcKwy74HjI+0RXrKv9KEv0DGP/4zJ+KTw5dFAEltEJR6eO24gPs/n/4VoxRvO1nYh1+e6i3Wz7taRgGUx1/3WctdNJHwOl4g51+SiWQHXDZleshI4Nd5E0f6CIcVUnFkIUXogs+ONsREG+mnf7fuRL7d4CBlxH1AwyQc+iuFKnM2DLLBWlVC/petM+XV9nDrpnyqjCuD0zVCW5WeFnAVon/NrpC/+P/6Nj6KbMdtBD0rWb/IrVlApRulo9iTDyDGvpP/0bKAufvhPd/+bc4q+aZjhn4bRjI2hQKTpVE/Sja7CcowxyPDlLZIQebZ2LI0fDRyv23CSo1STCBUaqtQWvxzU38FGoMyJfodSkGF4YCzcJ4=
+  irc:
+    template:
+    - '%{repository_slug}#%{build_number} (%{branch} - %{commit} : %{author}): %{message}'
+    - 'Change view : %{compare_url}'
+    - 'Build details : %{build_url}'
+    channels:
+    - irc.freenode.net#42og
+    on_success: never
+    on_failure: always
