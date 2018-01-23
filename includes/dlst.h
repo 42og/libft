@@ -6,7 +6,7 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/17 15:15:45 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/18 10:45:28 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/22 21:10:52 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,28 +24,30 @@ typedef struct		s_dlist
 }					t_dlist;
 
 void				ft_dlstappend(t_dlist **alst, t_dlist *new);
-
+t_dlist				*ft_dlstat(t_dlist *head, size_t index);
 void				ft_dlstdel(t_dlist **alst, void (*del)(void *, size_t));
-
 void				ft_dlstdel_back(
 									t_dlist **alst,
 									void (*del)(void *, size_t));
-
 void				ft_dlstdel_front(
 									t_dlist **alst,
 									void (*del)(void *, size_t));
-
 void				ft_dlstdelone(t_dlist **alst, void (*del)(void *, size_t));
-
+void				ft_dlstiter(t_dlist *lst, void (*f)(t_dlist *elem));
+t_dlist				*ft_dlstlink(void *content, size_t content_size);
 void				ft_dlstfilter(
 								t_dlist **alst,
 								int (*p)(t_dlist *),
 								void (*del)(void *, size_t));
-
-t_dlist				*ft_dlstnew(char const *content, size_t content_size);
-
+t_dlist				*ft_dlstnew(void const *content, size_t content_size);
 void				ft_dlstprepend(t_dlist **alst, t_dlist *new);
-
 void				ft_dlstreverse(t_dlist **alst);
+t_dlist				*ft_dlstremove(
+								t_dlist **head,
+								void *data,
+								int (*cmp)(const void *, const void *));
+t_dlist				*ft_dlstpop(t_dlist **alst);
+size_t				ft_dlstlen(t_dlist *list);
+void				**ft_dlst_to_tab(t_dlist *list);
 
 #endif

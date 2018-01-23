@@ -6,7 +6,7 @@
 /*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 15:11:29 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/17 15:54:17 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/22 18:52:50 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "dlst.h"
 #include "memory.h"
 
-t_dlist	*ft_dlstnew(char const *content, size_t content_size)
+t_dlist	*ft_dlstnew(void const *content, size_t content_size)
 {
 	t_dlist	*new_elem;
 

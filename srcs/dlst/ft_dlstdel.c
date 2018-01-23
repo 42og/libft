@@ -6,7 +6,7 @@
 /*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 17:20:52 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/17 15:53:01 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/23 15:36:55 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_dlstdel(t_dlist **alst, void (*del)(void *, size_t))
 {
 	t_dlist **tmp;
 
-	if (!alst || !*alst || !del)
+	if (!alst || !*alst)
 		return ;
 	tmp = &((*alst)->next);
 	ft_dlstdel_front(tmp, del);

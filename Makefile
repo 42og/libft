@@ -50,7 +50,9 @@ GNL_SRC         = get_next_line.c
 
 LST_SRC         = ft_lstadd.c ft_lstdel.c ft_lstdelone.c ft_lstfilter.c \
 				  ft_lstiter.c ft_lstlink.c ft_lstmap.c ft_lstnew.c \
-				  ft_lstpop.c ft_lstreverse.c
+				  ft_lstpop.c ft_lstreverse.c ft_dlstat.c ft_dlstiter.c \
+          ft_dlstlen.c ft_dlstpop.c ft_dlstlink.c ft_dlstremove.c \
+          ft_lstlen.c ft_lstremove.c ft_lstappend.c
 
 MEMORY_SRC      = ft_bzero.c ft_memalloc.c ft_memccpy.c ft_memchr.c \
 				  ft_memcmp.c ft_memcpy.c ft_memdel.c ft_memmove.c ft_memset.c 
