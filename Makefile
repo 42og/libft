@@ -1,158 +1,124 @@
-NAME=libft.a
-CC=clang
-CFLAGS=-Wall -Wextra -Werror
-INCLUDES=-Iincludes/
-AR=ar
-ARFLAGS=-rcs
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tvallee <tvallee@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2014/12/10 14:41:44 by tvallee           #+#    #+#              #
+#    Updated: 2018/01/23 13:30:32 by tvallee          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-SRC = srcs/conversion/ft_atoi.c \
-	srcs/conversion/ft_atou.c \
-	srcs/conversion/ft_atoimax.c \
-	srcs/conversion/ft_itoa.c \
-	srcs/conversion/ft_utoa.c \
-	srcs/conversion/ft_utoa_base.c \
-	srcs/ctype/ft_isalnum.c \
-	srcs/ctype/ft_isalpha.c \
-	srcs/ctype/ft_isascii.c \
-	srcs/ctype/ft_isatty.c \
-	srcs/ctype/ft_isblank.c \
-	srcs/ctype/ft_iscntrl.c \
-	srcs/ctype/ft_isdigit.c \
-	srcs/ctype/ft_isgraph.c \
-	srcs/ctype/ft_islower.c \
-	srcs/ctype/ft_isnumber.c \
-	srcs/ctype/ft_isprint.c \
-	srcs/ctype/ft_isspace.c \
-	srcs/ctype/ft_isupper.c \
-	srcs/ctype/ft_isxdigit.c \
-	srcs/ctype/ft_tolower.c \
-	srcs/ctype/ft_toupper.c \
-	srcs/dlst/ft_dlstappend.c \
-	srcs/dlst/ft_dlstat.c \
-	srcs/dlst/ft_dlstdel.c \
-	srcs/dlst/ft_dlstdel_back.c \
-	srcs/dlst/ft_dlstdel_front.c \
-	srcs/dlst/ft_dlstdelone.c \
-	srcs/dlst/ft_dlstfilter.c \
-	srcs/dlst/ft_dlstiter.c \
-	srcs/dlst/ft_dlstlen.c \
-	srcs/dlst/ft_dlstpop.c \
-	srcs/dlst/ft_dlstlink.c \
-	srcs/dlst/ft_dlstremove.c \
-	srcs/dlst/ft_dlstnew.c \
-	srcs/dlst/ft_dlstprepend.c \
-	srcs/dlst/ft_dlstreverse.c \
-	srcs/ft_getopt/ft_getopt.c \
-	srcs/ft_io/ft_putchar.c \
-	srcs/ft_io/ft_putchar_fd.c \
-	srcs/ft_io/ft_putendl.c \
-	srcs/ft_io/ft_putendl_fd.c \
-	srcs/ft_io/ft_putnbr.c \
-	srcs/ft_io/ft_putnbr_fd.c \
-	srcs/ft_io/ft_putstr.c \
-	srcs/ft_io/ft_putstr_fd.c \
-	srcs/ft_printf/ft_fprintf.c \
-	srcs/ft_printf/ft_printbin_fd.c \
-	srcs/ft_printf/ft_printchar_fd.c \
-	srcs/ft_printf/ft_printf.c \
-	srcs/ft_printf/ft_printhexa_fd.c \
-	srcs/ft_printf/ft_printint_fd.c \
-	srcs/ft_printf/ft_printitoa.c \
-	srcs/ft_printf/ft_printn_fd.c \
-	srcs/ft_printf/ft_printoctal_fd.c \
-	srcs/ft_printf/ft_printpercent_fd.c \
-	srcs/ft_printf/ft_printpointer_fd.c \
-	srcs/ft_printf/ft_printstr_fd.c \
-	srcs/ft_printf/ft_printuint_fd.c \
-	srcs/ft_printf/ft_printunichar_fd.c \
-	srcs/ft_printf/ft_printunistr_fd.c \
-	srcs/ft_printf/ft_vfprintf.c \
-	srcs/ft_printf/ft_vprintf.c \
-	srcs/ft_printf/parse_token.c \
-	srcs/ft_printf/print_token.c \
-	srcs/get_next_line/get_next_line.c \
-	srcs/lst/ft_lstadd.c \
-	srcs/lst/ft_lstdel.c \
-	srcs/lst/ft_lstdelone.c \
-	srcs/lst/ft_lstfilter.c \
-	srcs/lst/ft_lstiter.c \
-	srcs/lst/ft_lstlink.c \
-	srcs/lst/ft_lstlen.c \
-	srcs/lst/ft_lstmap.c \
-	srcs/lst/ft_lstnew.c \
-	srcs/lst/ft_lstpop.c \
-	srcs/lst/ft_lstreverse.c \
-	srcs/lst/ft_lstremove.c \
-	srcs/lst/ft_lstappend.c \
-	srcs/memory/ft_bzero.c \
-	srcs/memory/ft_memalloc.c \
-	srcs/memory/ft_memccpy.c \
-	srcs/memory/ft_memchr.c \
-	srcs/memory/ft_memcmp.c \
-	srcs/memory/ft_memcpy.c \
-	srcs/memory/ft_memdel.c \
-	srcs/memory/ft_memmove.c \
-	srcs/memory/ft_memset.c \
-	srcs/path/ft_basename.c \
-	srcs/rbtree/ft_rbnodenew.c \
-	srcs/string/ft_stpncpy.c \
-	srcs/string/ft_str_is_alpha.c \
-	srcs/string/ft_str_is_lowercase.c \
-	srcs/string/ft_str_is_numeric.c \
-	srcs/string/ft_str_is_printable.c \
-	srcs/string/ft_str_is_uppercase.c \
-	srcs/string/ft_strcapitalize.c \
-	srcs/string/ft_strcasecmp.c \
-	srcs/string/ft_strcat.c \
-	srcs/string/ft_strchr.c \
-	srcs/string/ft_strclr.c \
-	srcs/string/ft_strcmp.c \
-	srcs/string/ft_strcpy.c \
-	srcs/string/ft_strdel.c \
-	srcs/string/ft_strdup.c \
-	srcs/string/ft_strequ.c \
-	srcs/string/ft_striter.c \
-	srcs/string/ft_striteri.c \
-	srcs/string/ft_strjoin.c \
-	srcs/string/ft_strlcat.c \
-	srcs/string/ft_strlen.c \
-	srcs/string/ft_strmap.c \
-	srcs/string/ft_strmapi.c \
-	srcs/string/ft_strncasecmp.c \
-	srcs/string/ft_strncat.c \
-	srcs/string/ft_strncmp.c \
-	srcs/string/ft_strncpy.c \
-	srcs/string/ft_strndup.c \
-	srcs/string/ft_strnequ.c \
-	srcs/string/ft_strnew.c \
-	srcs/string/ft_strnjoin.c \
-	srcs/string/ft_strnlen.c \
-	srcs/string/ft_strnstr.c \
-	srcs/string/ft_strrchr.c \
-	srcs/string/ft_strsplit.c \
-	srcs/string/ft_strstr.c \
-	srcs/string/ft_strsub.c \
-	srcs/string/ft_strtrim.c \
-	srcs/string/ft_strtrimc.c \
-	srcs/string/to_utf8.c
+NAME            = libft.a
+CFLAGS         += -Wall -Wextra -Werror
+SRCDIR          = srcs/
+OBJDIR          = .obj/
+INCDIR          = includes/
+AR              =ar
+ARFLAGS         =-rcs
 
-OBJ = $(SRC:.c=.o)
+# set the suffix list explicitly
+.SUFFIXES:
+.SUFFIXES: .c .o .d
+
+# list all sources
+CONVERSION_SRC  = ft_atoi.c ft_atou.c ft_atoimax.c ft_itoa.c ft_utoa.c \
+				  ft_utoa_base.c 
+
+CTYPE_SRC       = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isatty.c \
+				  ft_isblank.c ft_iscntrl.c ft_isdigit.c ft_isgraph.c \
+				  ft_islower.c ft_isnumber.c ft_isprint.c ft_isspace.c \
+				  ft_isupper.c ft_isxdigit.c ft_tolower.c ft_toupper.c 
+
+DLST_SRC        = ft_dlstappend.c ft_dlstdel.c ft_dlstdel_back.c \
+				  ft_dlstdel_front.c ft_dlstdelone.c ft_dlstfilter.c \
+				  ft_dlstnew.c ft_dlstprepend.c ft_dlstreverse.c 
+
+FT_GETOPT_SRC   = ft_getopt.c 
+FT_IO_SRC       = ft_putchar.c ft_putchar_fd.c ft_putendl.c ft_putendl_fd.c \
+				  ft_putnbr.c ft_putnbr_fd.c ft_putstr.c ft_putstr_fd.c 
+
+FT_PRINTF_SRC   = ft_fprintf.c ft_printbin_fd.c ft_printchar_fd.c ft_printf.c \
+				  ft_printhexa_fd.c ft_printint_fd.c ft_printitoa.c \
+				  ft_printn_fd.c ft_printoctal_fd.c ft_printpercent_fd.c \
+				  ft_printpointer_fd.c ft_printstr_fd.c ft_printuint_fd.c \
+				  ft_printunichar_fd.c ft_printunistr_fd.c ft_vfprintf.c \
+				  ft_vprintf.c parse_token.c print_token.c
+
+GNL_SRC         = get_next_line.c 
+
+LST_SRC         = ft_lstadd.c ft_lstdel.c ft_lstdelone.c ft_lstfilter.c \
+				  ft_lstiter.c ft_lstlink.c ft_lstmap.c ft_lstnew.c \
+				  ft_lstpop.c ft_lstreverse.c ft_dlstat.c ft_dlstiter.c \
+          ft_dlstlen.c ft_dlstpop.c ft_dlstlink.c ft_dlstremove.c \
+          ft_lstlen.c ft_lstremove.c ft_lstappend.c
+
+MEMORY_SRC      = ft_bzero.c ft_memalloc.c ft_memccpy.c ft_memchr.c \
+				  ft_memcmp.c ft_memcpy.c ft_memdel.c ft_memmove.c ft_memset.c 
+
+PATH_SRC        =ft_basename.c 
+
+RBTREE_SRC      =ft_rbnodenew.c 
+
+STRING_SRC      =ft_stpncpy.c ft_str_is_alpha.c ft_str_is_lowercase.c \
+				 ft_str_is_numeric.c ft_str_is_printable.c \
+				 ft_str_is_uppercase.c ft_strcapitalize.c ft_strcasecmp.c \
+				 ft_strcat.c ft_strchr.c ft_strclr.c ft_strcmp.c ft_strcpy.c \
+				 ft_strdel.c ft_strdup.c ft_strequ.c ft_striter.c \
+				 ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlen.c \
+				 ft_strmap.c ft_strmapi.c ft_strncasecmp.c ft_strncat.c \
+				 ft_strncmp.c ft_strncpy.c ft_strndup.c ft_strnequ.c \
+				 ft_strnew.c ft_strnjoin.c ft_strnlen.c ft_strnstr.c \
+				 ft_strrchr.c ft_strsplit.c ft_strstr.c ft_strsub.c \
+				 ft_strtrim.c ft_strtrimc.c to_utf8.c
+
+SRCDIRS         = conversion/ ctype/ dlst/ ft_getopt/ ft_io/ ft_printf/ \
+				  get_next_line/ lst/ memory/ path/ rbtree/ string/
+SRC             = $(addprefix conversion/,$(CONVERSION_SRC)) \
+				  $(addprefix ctype/,$(CTYPE_SRC)) \
+				  $(addprefix dlst/,$(DLST_SRC)) \
+                  $(addprefix ft_getopt/,$(FT_GETOPT_SRC)) \
+				  $(addprefix ft_io/,$(FT_IO_SRC)) \
+				  $(addprefix ft_printf/,$(FT_PRINTF_SRC)) \
+				  $(addprefix get_next_line/,$(GNL_SRC)) \
+				  $(addprefix lst/,$(LST_SRC)) \
+				  $(addprefix memory/,$(MEMORY_SRC)) \
+				  $(addprefix path/,$(PATH_SRC)) \
+				  $(addprefix rbtree/,$(RBTREE_SRC)) \
+				  $(addprefix string/,$(STRING_SRC))
+
+
+CFLAGS         += -I$(INCDIR)
+OBJS            = $(SRC:.c=.o)
+DEPS            = $(OBJS:.o=.d)
+OUTPUT_OPTION   = -o $(OBJDIR)$@
+CPPFLAGS       += -MT $@ -MMD -MP -MF $(OBJDIR)$(@:.o=.d)
+OBJDIRS         = $(addprefix $(OBJDIR),$(SRCDIRS))
+
+vpath %.c $(SRCDIR)
+vpath %.o $(OBJDIR)
 
 all: $(NAME)
 
-%.o: %.c
-	@zsh -c "echo -n '\tCompiling $<'"
-	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
-	@zsh -c 'echo -e "\r\t\033[32mCompiled $@\033[0m "'
+$(NAME): $(OBJS)
+	$(AR) $(ARFLAGS) $@ $(addprefix $(OBJDIR),$(OBJS))
 
-$(NAME): $(OBJ)
-	@$(AR) $(ARFLAGS) $(NAME) $(OBJ)
+.SECONDEXPANSION:
+$(OBJS): %: | $$(dir $(OBJDIR)%)
+-include $(addprefix $(OBJDIR),$(DEPS))
+
+$(OBJDIRS) $(OBJDIR):
+	mkdir -p $@
 
 clean:
-	@rm -rf $(OBJ)
+	$(RM) -Rf $(OBJDIR)
 
-fclean: clean
-	@rm -rf $(NAME)
+fclean: | clean
+	$(RM) -f $(NAME)
 
-re: fclean
-	$(MAKE)
+re:
+	$(MAKE) -j8 fclean
+	$(MAKE) -j8
+
+.PHONY: all clean fclean re

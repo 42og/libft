@@ -1,5 +1,6 @@
 a.out
 *.o
+*.d
 libft.a
 main.c
 .syntastic_c_config
