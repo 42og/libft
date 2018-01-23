@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstpop.c                                        :+:      :+:    :+:   */
+/*   ft_dlstlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 18:27:57 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/19 18:21:39 by mdeville         ###   ########.fr       */
+/*   Created: 2018/01/19 20:17:31 by mdeville          #+#    #+#             */
+/*   Updated: 2018/01/22 16:43:23 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lst.h"
-#include <stdlib.h>
+#include "dlst.h"
 
-t_list	*ft_lstpop(t_list **alst)
+size_t	ft_dlstlen(t_dlist *list)
 {
-	t_list	*res;
+	size_t i;
 
-	if (!alst || !*alst)
-		return (NULL);
-	res = *alst;
-	*alst = (*alst)->next;
-	res->next = NULL;
-	return (res);
+	i = 0;
+	while (list)
+	{
+		i++;
+		list = list->next;
+	}
+	return (i);
 }

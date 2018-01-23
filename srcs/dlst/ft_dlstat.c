@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstpop.c                                        :+:      :+:    :+:   */
+/*   ft_dlstat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 18:27:57 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/19 18:21:39 by mdeville         ###   ########.fr       */
+/*   Created: 2018/01/22 16:48:47 by mdeville          #+#    #+#             */
+/*   Updated: 2018/01/22 16:50:04 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lst.h"
-#include <stdlib.h>
+#include "dlst.h"
 
-t_list	*ft_lstpop(t_list **alst)
+t_dlist	*ft_dlstat(t_dlist *head, size_t index)
 {
-	t_list	*res;
+	size_t i;
 
-	if (!alst || !*alst)
-		return (NULL);
-	res = *alst;
-	*alst = (*alst)->next;
-	res->next = NULL;
-	return (res);
+	i = 0;
+	while (head && i < index)
+	{
+		head = head->next;
+		i++;
+	}
+	return (head);
 }

@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstpop.c                                        :+:      :+:    :+:   */
+/*   ft_dlstiter.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 18:27:57 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/19 18:21:39 by mdeville         ###   ########.fr       */
+/*   Created: 2017/08/29 22:32:10 by mdeville          #+#    #+#             */
+/*   Updated: 2018/01/22 15:56:14 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lst.h"
-#include <stdlib.h>
+#include "dlst.h"
 
-t_list	*ft_lstpop(t_list **alst)
+void	ft_dlstiter(t_dlist *lst, void (*f)(t_dlist *elem))
 {
-	t_list	*res;
-
-	if (!alst || !*alst)
-		return (NULL);
-	res = *alst;
-	*alst = (*alst)->next;
-	res->next = NULL;
-	return (res);
+	if (!lst || !f)
+		return ;
+	while (lst)
+	{
+		(*f)(lst);
+		lst = lst->next;
+	}
 }

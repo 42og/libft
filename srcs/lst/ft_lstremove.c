@@ -1,30 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*   ft_lstremove.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/29 22:06:14 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/18 20:50:16 by mdeville         ###   ########.fr       */
+/*   Created: 2018/01/19 18:14:12 by mdeville          #+#    #+#             */
+/*   Updated: 2018/01/19 18:24:52 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lst.h"
-#include <stdlib.h>
 
-void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+t_list	*ft_lstremove(
+				t_list **list,
+				void *dataref,
+				int (*cmp)(const void *, const void *))
 {
 	t_list *tmp;
+	t_list *prev;
 
-	if (!alst)
-		return ;
-	while (*alst)
+	if (!list || !cmp || !dataref)
+		return (NULL);
+	prev = NULL;
+	tmp = *list;
+	while (tmp)
 	{
-		tmp = (*alst)->next;
-		if (del)
-			(*del)((*alst)->content, (*alst)->content_size);
-		free(*alst);
-		*alst = tmp;
+		if (!cmp(tmp->content, dataref))
+		{
+			if (prev)
+				prev->next = tmp->next;
+			else
+				*list = tmp->next;
+			tmp->next = NULL;
+			return (tmp);
+		}
+		prev = tmp;
+		tmp = tmp->next;
 	}
+	return (NULL);
 }

@@ -28,11 +28,17 @@ SRC = srcs/conversion/ft_atoi.c \
 	srcs/ctype/ft_tolower.c \
 	srcs/ctype/ft_toupper.c \
 	srcs/dlst/ft_dlstappend.c \
+	srcs/dlst/ft_dlstat.c \
 	srcs/dlst/ft_dlstdel.c \
 	srcs/dlst/ft_dlstdel_back.c \
 	srcs/dlst/ft_dlstdel_front.c \
 	srcs/dlst/ft_dlstdelone.c \
 	srcs/dlst/ft_dlstfilter.c \
+	srcs/dlst/ft_dlstiter.c \
+	srcs/dlst/ft_dlstlen.c \
+	srcs/dlst/ft_dlstpop.c \
+	srcs/dlst/ft_dlstlink.c \
+	srcs/dlst/ft_dlstremove.c \
 	srcs/dlst/ft_dlstnew.c \
 	srcs/dlst/ft_dlstprepend.c \
 	srcs/dlst/ft_dlstreverse.c \
@@ -71,10 +77,13 @@ SRC = srcs/conversion/ft_atoi.c \
 	srcs/lst/ft_lstfilter.c \
 	srcs/lst/ft_lstiter.c \
 	srcs/lst/ft_lstlink.c \
+	srcs/lst/ft_lstlen.c \
 	srcs/lst/ft_lstmap.c \
 	srcs/lst/ft_lstnew.c \
 	srcs/lst/ft_lstpop.c \
 	srcs/lst/ft_lstreverse.c \
+	srcs/lst/ft_lstremove.c \
+	srcs/lst/ft_lstappend.c \
 	srcs/memory/ft_bzero.c \
 	srcs/memory/ft_memalloc.c \
 	srcs/memory/ft_memccpy.c \

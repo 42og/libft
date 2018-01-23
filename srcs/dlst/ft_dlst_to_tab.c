@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstpop.c                                        :+:      :+:    :+:   */
+/*   ft_dlst_to_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 18:27:57 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/19 18:21:39 by mdeville         ###   ########.fr       */
+/*   Created: 2018/01/22 20:02:04 by mdeville          #+#    #+#             */
+/*   Updated: 2018/01/22 20:47:01 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lst.h"
 #include <stdlib.h>
+#include "memory.h"
+#include "dlst.h"
 
-t_list	*ft_lstpop(t_list **alst)
+void	**ft_dlst_to_tab(t_dlist *list)
 {
-	t_list	*res;
+	size_t	i;
+	size_t	len;
+	void	**res;
 
-	if (!alst || !*alst)
+	len = ft_dlstlen(list);
+	if (!(res = (void **)malloc(sizeof(void *) * (len + 1))))
 		return (NULL);
-	res = *alst;
-	*alst = (*alst)->next;
-	res->next = NULL;
+	i = 0;
+	while (list)
+	{
+		res[i] = list->content;
+		list = list->next;
+		i += 1;
+	}
+	res[i] = NULL;
 	return (res);
 }

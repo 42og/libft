@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstpop.c                                        :+:      :+:    :+:   */
+/*   ft_dlstlink.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 18:27:57 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/19 18:21:39 by mdeville         ###   ########.fr       */
+/*   Created: 2018/01/18 19:09:20 by mdeville          #+#    #+#             */
+/*   Updated: 2018/01/22 15:55:31 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lst.h"
 #include <stdlib.h>
+#include "dlst.h"
 
-t_list	*ft_lstpop(t_list **alst)
+t_dlist	*ft_dlstlink(void *content, size_t content_size)
 {
-	t_list	*res;
+	t_dlist *list;
 
-	if (!alst || !*alst)
+	if (!(list = (t_dlist *)malloc(sizeof(t_dlist))))
 		return (NULL);
-	res = *alst;
-	*alst = (*alst)->next;
-	res->next = NULL;
-	return (res);
+	list->next = NULL;
+	list->prev = NULL;
+	list->content_size = (content) ? content_size : 0;
+	list->content = content;
+	return (list);
 }

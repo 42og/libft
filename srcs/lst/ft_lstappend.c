@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstpop.c                                        :+:      :+:    :+:   */
+/*   ft_lstappend.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 18:27:57 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/19 18:21:39 by mdeville         ###   ########.fr       */
+/*   Created: 2018/01/23 15:44:36 by mdeville          #+#    #+#             */
+/*   Updated: 2018/01/23 15:44:42 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lst.h"
-#include <stdlib.h>
 
-t_list	*ft_lstpop(t_list **alst)
+void	ft_lstappend(t_list **alst, t_list *new)
 {
-	t_list	*res;
+	t_list	*tmp;
 
-	if (!alst || !*alst)
-		return (NULL);
-	res = *alst;
-	*alst = (*alst)->next;
-	res->next = NULL;
-	return (res);
+	tmp = *alst;
+	if (tmp)
+	{
+		while (tmp->next)
+			tmp = tmp->next;
+		tmp->next = new;
+	}
+	else
+		*alst = new;
 }
