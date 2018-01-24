@@ -6,7 +6,7 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/17 15:18:31 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/17 15:19:19 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/24 15:34:43 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 # define PATH_H
 
 char	*ft_basename(char *path);
+char	*ft_dirname(char *path);
 
 #endif

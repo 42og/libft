@@ -6,7 +6,7 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 16:32:22 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/17 15:58:45 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/24 15:35:18 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 char	*ft_basename(char *path)
 {
-	size_t i;
+	static char	dot[] = ".";
+	char		*p;
 
 	if (!path || !*path)
-		return (path);
-	i = ft_strlen(path);
-	while (i > 0 && path[i] != '/')
-		i -= 1;
-	if (path[i] != '/')
-		return (path);
-	else
-		return (path + i + 1);
+		return (dot);
+	p = path + ft_strlen(path);
+	while (p > path + 1 && *(p - 1) == '/')
+		--p;
+	*p = '\0';
+	p = ft_strrchr(path, '/');
+	return ((p) ? p + 1 : path);
 }

@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dlstdel_front.c                                 :+:      :+:    :+:   */
+/*   ft_dirname.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/29 22:06:14 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/23 15:36:09 by mdeville         ###   ########.fr       */
+/*   Created: 2018/01/24 14:53:59 by mdeville          #+#    #+#             */
+/*   Updated: 2018/01/24 15:34:02 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "dlst.h"
-#include <stdlib.h>
+#include "ft_string.h"
 
-void	ft_dlstdel_front(t_dlist **alst, void (*del)(void *, size_t))
+char	*dirname(char *path)
 {
-	t_dlist	*tmp;
+	static char	dot[] = ".";
+	char		*p;
 
-	if (!alst || !del)
-		return ;
-	while (*alst)
-	{
-		tmp = (*alst)->next;
-		if (del)
-			(*del)((*alst)->content, (*alst)->content_size);
-		free(*alst);
-		*alst = tmp;
-	}
+	if (!path || !*path || !(p = ft_strchr(path, '/')))
+		return dot;
+	p = path + ft_strlen(path);
+	while (p > path && *(p - 1) == '/')
+		--p;
+	while (p > path && *(p - 1) != '/')
+		--p;
+	while (p > path && *(p - 1) == '/')
+		--p;
+	*p = '\0';
+	return (path);
 }
