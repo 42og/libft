@@ -6,7 +6,7 @@
 #    By: tvallee <tvallee@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/12/10 14:41:44 by tvallee           #+#    #+#              #
-#    Updated: 2018/01/24 15:34:20 by mdeville         ###   ########.fr        #
+#    Updated: 2018/01/24 16:28:44 by mdeville         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRCDIR          = srcs/
 OBJDIR          = .obj/
 INCDIR          = includes/
 AR              = ar
-ARFLAGS         =-rcs
+ARFLAGS         = -rcs
 
 # set the suffix list explicitly
 .SUFFIXES:
@@ -24,12 +24,12 @@ ARFLAGS         =-rcs
 
 # list all sources
 CONVERSION_SRC  =	ft_atoi.c ft_atou.c ft_atoimax.c ft_itoa.c ft_utoa.c \
-					ft_utoa_base.c 
+					ft_utoa_base.c
 
-CTYPE_SRC       =	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isatty.c \
+FT_CTYPE_SRC    =	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isatty.c \
 					ft_isblank.c ft_iscntrl.c ft_isdigit.c ft_isgraph.c \
 					ft_islower.c ft_isnumber.c ft_isprint.c ft_isspace.c \
-					ft_isupper.c ft_isxdigit.c ft_tolower.c ft_toupper.c 
+					ft_isupper.c ft_isxdigit.c ft_tolower.c ft_toupper.c
 
 DLST_SRC        =	ft_dlstappend.c ft_dlstdel.c ft_dlstdel_back.c \
 					ft_dlstdel_front.c ft_dlstdelone.c ft_dlstfilter.c \
@@ -42,12 +42,12 @@ FT_GETOPT_SRC   =	ft_getopt.c
 FT_IO_SRC       =	ft_putchar.c ft_putchar_fd.c ft_putendl.c ft_putendl_fd.c \
 					ft_putnbr.c ft_putnbr_fd.c ft_putstr.c ft_putstr_fd.c
 
-FT_PRINTF_SRC   =	ft_fprintf.c ft_printbin_fd.c ft_printchar_fd.c ft_printf.c \
-					ft_printhexa_fd.c ft_printint_fd.c ft_printitoa.c \
-					ft_printn_fd.c ft_printoctal_fd.c ft_printpercent_fd.c \
-					ft_printpointer_fd.c ft_printstr_fd.c ft_printuint_fd.c \
-					ft_printunichar_fd.c ft_printunistr_fd.c ft_vfprintf.c \
-					ft_vprintf.c parse_token.c print_token.c
+FT_PRINTF_SRC   =	ft_fprintf.c ft_printbin_fd.c ft_printchar_fd.c \
+					ft_printf.c ft_printhexa_fd.c ft_printint_fd.c \
+					ft_printitoa.c ft_printn_fd.c ft_printoctal_fd.c \
+					ft_printpercent_fd.c ft_printpointer_fd.c ft_printstr_fd.c \
+					ft_printuint_fd.c ft_printunichar_fd.c ft_printunistr_fd.c \
+					ft_vfprintf.c ft_vprintf.c parse_token.c print_token.c
 
 GNL_SRC         =	get_next_line.c
 
@@ -63,23 +63,23 @@ PATH_SRC        =	ft_basename.c ft_dirname.c
 
 RBTREE_SRC      =	ft_rbnodenew.c
 
-STRING_SRC      =	ft_stpncpy.c ft_str_is_alpha.c ft_str_is_lowercase.c \
+FT_STRING_SRC   =	ft_stpncpy.c ft_str_is_alpha.c ft_str_is_lowercase.c \
 					ft_str_is_numeric.c ft_str_is_printable.c \
 					ft_str_is_uppercase.c ft_strcapitalize.c ft_strcasecmp.c \
-					ft_strcat.c ft_strchr.c ft_strclr.c ft_strcmp.c ft_strcpy.c \
-					ft_strdel.c ft_strdup.c ft_strequ.c ft_striter.c \
-					ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlen.c \
-					ft_strmap.c ft_strmapi.c ft_strncasecmp.c ft_strncat.c \
-					ft_strncmp.c ft_strncpy.c ft_strndup.c ft_strnequ.c \
-					ft_strnew.c ft_strnjoin.c ft_strnlen.c ft_strnstr.c \
-					ft_strrchr.c ft_strsplit.c ft_strstr.c ft_strsub.c \
-					ft_strtrim.c ft_strtrimc.c to_utf8.c
+					ft_strcat.c ft_strchr.c ft_strclr.c ft_strcmp.c \
+					ft_strcpy.c ft_strdel.c ft_strdup.c ft_strequ.c \
+					ft_striter.c ft_striteri.c ft_strjoin.c ft_strlcat.c \
+					ft_strlen.c ft_strmap.c ft_strmapi.c ft_strncasecmp.c \
+					ft_strncat.c ft_strncmp.c ft_strncpy.c ft_strndup.c \
+					ft_strnequ.c ft_strnew.c ft_strnjoin.c ft_strnlen.c \
+					ft_strnstr.c ft_strrchr.c ft_strsplit.c ft_strstr.c \
+					ft_strsub.c ft_strtrim.c ft_strtrimc.c to_utf8.c
 
-SRCDIRS         =	conversion/ ctype/ dlst/ ft_getopt/ ft_io/ ft_printf/ \
-					get_next_line/ lst/ memory/ path/ rbtree/ string/
+SRCDIRS         =	conversion/ ft_ctype/ dlst/ ft_getopt/ ft_io/ ft_printf/ \
+					get_next_line/ lst/ memory/ path/ rbtree/ ft_string/
 
 SRC             =	$(addprefix conversion/,$(CONVERSION_SRC)) \
-					$(addprefix ctype/,$(CTYPE_SRC)) \
+					$(addprefix ft_ctype/,$(FT_CTYPE_SRC)) \
 					$(addprefix dlst/,$(DLST_SRC)) \
 					$(addprefix ft_getopt/,$(FT_GETOPT_SRC)) \
 					$(addprefix ft_io/,$(FT_IO_SRC)) \
@@ -89,7 +89,7 @@ SRC             =	$(addprefix conversion/,$(CONVERSION_SRC)) \
 					$(addprefix memory/,$(MEMORY_SRC)) \
 					$(addprefix path/,$(PATH_SRC)) \
 					$(addprefix rbtree/,$(RBTREE_SRC)) \
-					$(addprefix string/,$(STRING_SRC))
+					$(addprefix ft_string/,$(FT_STRING_SRC))
 
 
 CFLAGS         += -I$(INCDIR)
