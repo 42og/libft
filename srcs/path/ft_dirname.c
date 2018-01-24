@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   path.h                                             :+:      :+:    :+:   */
+/*   ft_dirname.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/17 15:18:31 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/24 15:34:43 by mdeville         ###   ########.fr       */
+/*   Created: 2018/01/24 14:53:59 by mdeville          #+#    #+#             */
+/*   Updated: 2018/01/24 15:34:02 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PATH_H
-# define PATH_H
+#include "ft_string.h"
 
-char	*ft_basename(char *path);
-char	*ft_dirname(char *path);
+char	*dirname(char *path)
+{
+	static char	dot[] = ".";
+	char		*p;
 
-#endif
+	if (!path || !*path || !(p = ft_strchr(path, '/')))
+		return dot;
+	p = path + ft_strlen(path);
+	while (p > path && *(p - 1) == '/')
+		--p;
+	while (p > path && *(p - 1) != '/')
+		--p;
+	while (p > path && *(p - 1) == '/')
+		--p;
+	*p = '\0';
+	return (path);
+}
