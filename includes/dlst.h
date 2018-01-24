@@ -6,7 +6,7 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/17 15:15:45 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/22 21:10:52 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/24 21:56:58 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,6 @@ typedef struct		s_dlist
 void				ft_dlstappend(t_dlist **alst, t_dlist *new);
 t_dlist				*ft_dlstat(t_dlist *head, size_t index);
 void				ft_dlstdel(t_dlist **alst, void (*del)(void *, size_t));
-void				ft_dlstdel_back(
-									t_dlist **alst,
-									void (*del)(void *, size_t));
-void				ft_dlstdel_front(
-									t_dlist **alst,
-									void (*del)(void *, size_t));
 void				ft_dlstdelone(t_dlist **alst, void (*del)(void *, size_t));
 void				ft_dlstiter(t_dlist *lst, void (*f)(t_dlist *elem));
 t_dlist				*ft_dlstlink(void *content, size_t content_size);
