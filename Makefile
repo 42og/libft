@@ -6,7 +6,7 @@
 #    By: tvallee <tvallee@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/12/10 14:41:44 by tvallee           #+#    #+#              #
-#    Updated: 2018/01/24 21:56:33 by mdeville         ###   ########.fr        #
+#    Updated: 2018/01/27 16:21:44 by mdeville         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,8 @@ FT_CTYPE_SRC    =	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isatty.c \
 DLST_SRC        =	ft_dlstappend.c ft_dlstdel.c ft_dlstdelone.c \
 					ft_dlstfilter.c ft_dlstlen.c ft_dlstpop.c ft_dlstlink.c \
 					ft_dlstremove.c ft_dlstnew.c ft_dlstprepend.c \
-					ft_dlstreverse.c ft_dlstat.c ft_dlstiter.c ft_dlst_to_tab.c
+					ft_dlstreverse.c ft_dlstat.c ft_dlstiter.c \
+					ft_dlstsort.c ft_dlst_to_tab.c
 
 FT_GETOPT_SRC   =	ft_getopt.c
 
