@@ -6,7 +6,7 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/26 09:47:06 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/27 16:20:14 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/27 16:33:49 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static t_dlist	*merge(
 					t_dlist *a,
 					t_dlist *b,
-					intmax_t (*cmp)(t_dlist *l1, t_dlist *l2))
+					int (*cmp)(t_dlist *l1, t_dlist *l2))
 {
 	t_dlist *head;
 
