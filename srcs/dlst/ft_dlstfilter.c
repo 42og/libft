@@ -6,7 +6,7 @@
 /*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 16:08:29 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/17 15:53:51 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/02/12 14:50:34 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,9 @@ static inline void	ft_trimhead(
 {
 	t_dlist *tmp;
 
-	while ((*p)(*alst))
+	while (!(*p)(*alst))
 	{
 		tmp = *alst;
-		(*alst)->prev = NULL;
 		*alst = (*alst)->next;
 		ft_dlstdelone(&tmp, del);
 	}
@@ -45,8 +44,6 @@ void				ft_dlstfilter(
 		if (!(*p)(curr))
 		{
 			tmp = curr->next;
-			curr->prev->next = tmp;
-			curr->next->prev = curr->prev;
 			ft_dlstdelone(&curr, del);
 			curr = tmp;
 		}

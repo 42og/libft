@@ -6,7 +6,7 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/24 14:53:59 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/24 15:34:02 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/01/27 21:23:36 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*dirname(char *path)
 	char		*p;
 
 	if (!path || !*path || !(p = ft_strchr(path, '/')))
-		return dot;
+		return (dot);
 	p = path + ft_strlen(path);
 	while (p > path && *(p - 1) == '/')
 		--p;

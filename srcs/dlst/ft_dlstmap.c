@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_dlstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/30 13:15:25 by mdeville          #+#    #+#             */
-/*   Updated: 2018/02/12 15:13:04 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/02/12 15:13:56 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lst.h"
+#include "dlst.h"
 
-t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+t_dlist	*ft_dlstmap(t_dlist *lst, t_dlist *(*f)(t_list *elem))
 {
-	t_list	*res;
-	t_list	*prev;
-	t_list	*curr;
+	t_dlist	*res;
+	t_dlist	*prev;
+	t_dlist	*curr;
 
 	if (!lst || !f)
 		return (NULL);
@@ -31,6 +31,7 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 		if (!curr)
 			return (NULL);
 		prev->next = curr;
+		curr->prev = prev;
 		prev = curr;
 		lst = lst->next;
 	}
