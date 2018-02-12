@@ -6,13 +6,13 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/30 13:15:25 by mdeville          #+#    #+#             */
-/*   Updated: 2018/02/12 15:13:56 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/02/12 16:01:03 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "dlst.h"
 
-t_dlist	*ft_dlstmap(t_dlist *lst, t_dlist *(*f)(t_list *elem))
+t_dlist	*ft_dlstmap(t_dlist *lst, t_dlist *(*f)(t_dlist *elem))
 {
 	t_dlist	*res;
 	t_dlist	*prev;

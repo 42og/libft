@@ -6,7 +6,7 @@
 #    By: tvallee <tvallee@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/12/10 14:41:44 by tvallee           #+#    #+#              #
-#    Updated: 2018/01/29 15:49:12 by mdeville         ###   ########.fr        #
+#    Updated: 2018/02/12 16:00:31 by mdeville         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ DLST_SRC        =	ft_dlstappend.c ft_dlstdel.c ft_dlstdelone.c \
 					ft_dlstfilter.c ft_dlstlen.c ft_dlstpop.c ft_dlstlink.c \
 					ft_dlstremove.c ft_dlstnew.c ft_dlstprepend.c \
 					ft_dlstreverse.c ft_dlstat.c ft_dlstiter.c \
-					ft_dlstsort.c ft_dlst_to_tab.c ft_dlstcpy.c
+					ft_dlstsort.c ft_dlst_to_tab.c ft_dlstcpy.c ft_dlstmap.c
 
 FT_GETOPT_SRC   =	ft_getopt.c
 
