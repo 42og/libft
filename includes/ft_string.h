@@ -6,7 +6,7 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/17 15:20:59 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/24 16:26:54 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/02/14 21:31:22 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ char	*ft_strnstr(
 				size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	**ft_strsplit(char const *s, char c);
+char	**ft_strsplit_str(char const *s, char const *str);
 char	*ft_strstr(const char *haystack, const char *needle);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s);

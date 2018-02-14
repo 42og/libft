@@ -6,7 +6,7 @@
 #    By: tvallee <tvallee@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/12/10 14:41:44 by tvallee           #+#    #+#              #
-#    Updated: 2018/02/12 16:00:31 by mdeville         ###   ########.fr        #
+#    Updated: 2018/02/14 21:31:44 by mdeville         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,7 +73,8 @@ FT_STRING_SRC   =	ft_stpncpy.c ft_str_is_alpha.c ft_str_is_lowercase.c \
 					ft_strncat.c ft_strncmp.c ft_strncpy.c ft_strndup.c \
 					ft_strnequ.c ft_strnew.c ft_strnjoin.c ft_strnlen.c \
 					ft_strnstr.c ft_strrchr.c ft_strsplit.c ft_strstr.c \
-					ft_strsub.c ft_strtrim.c ft_strtrimc.c to_utf8.c
+					ft_strsub.c ft_strtrim.c ft_strtrimc.c to_utf8.c \
+					ft_strsplit_str.c
 
 SRCDIRS         =	conversion/ ft_ctype/ dlst/ ft_getopt/ ft_io/ ft_printf/ \
 					get_next_line/ lst/ memory/ path/ rbtree/ ft_string/
