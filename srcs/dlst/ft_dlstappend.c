@@ -6,7 +6,7 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/29 22:23:18 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/17 15:52:38 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/02/15 20:43:25 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,21 @@
 
 void	ft_dlstappend(t_dlist **alst, t_dlist *new)
 {
+	t_dlist	*curr;
+
 	if (!alst || !new)
 		return ;
-	new->prev = *alst;
-	if (*alst)
-		new->next = (*alst)->next;
+	new->next = NULL;
+	if (!*alst)
+	{
+		new->prev = NULL;
+		*alst = curr;
+	}
 	else
-		new->next = NULL;
-	*alst = new;
+	{
+		while (curr->next)
+			curr = curr->next;
+		curr->next = new;
+		new->prev = curr;
+	}
 }
