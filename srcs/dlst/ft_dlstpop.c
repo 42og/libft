@@ -6,14 +6,14 @@
 /*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 18:27:57 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/22 16:02:50 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/02/15 19:34:49 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "dlst.h"
 #include <stdlib.h>
 
-t_dlist	*ft_lstpop(t_dlist **alst)
+t_dlist	*ft_dlstpop(t_dlist **alst)
 {
 	t_dlist	*res;
 
