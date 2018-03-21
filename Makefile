@@ -6,7 +6,7 @@
 #    By: tvallee <tvallee@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/12/10 14:41:44 by tvallee           #+#    #+#              #
-#    Updated: 2018/03/01 13:28:04 by mdeville         ###   ########.fr        #
+#    Updated: 2018/03/21 19:00:55 by mdeville         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,7 +63,7 @@ MEMORY_SRC      =	ft_bzero.c ft_memalloc.c ft_memccpy.c ft_memchr.c \
 
 PATH_SRC        =	ft_basename.c ft_dirname.c
 
-RBTREE_SRC      =	ft_rbnodenew.c
+AVLTREE_SRC      =	ft_avlnew.c ft_avlutils.c
 
 FT_STRING_SRC   =	ft_stpncpy.c ft_str_is_alpha.c ft_str_is_lowercase.c \
 					ft_str_is_numeric.c ft_str_is_printable.c \
@@ -79,7 +79,7 @@ FT_STRING_SRC   =	ft_stpncpy.c ft_str_is_alpha.c ft_str_is_lowercase.c \
 					ft_strsplit_str.c
 
 SRCDIRS         =	conversion/ ft_ctype/ dlst/ ft_getopt/ ft_io/ ft_printf/ \
-					get_next_line/ lst/ memory/ path/ rbtree/ ft_string/
+					get_next_line/ lst/ memory/ path/ avltree/ ft_string/
 
 SRC             =	$(addprefix conversion/,$(CONVERSION_SRC)) \
 					$(addprefix ft_ctype/,$(FT_CTYPE_SRC)) \
@@ -91,7 +91,7 @@ SRC             =	$(addprefix conversion/,$(CONVERSION_SRC)) \
 					$(addprefix lst/,$(LST_SRC)) \
 					$(addprefix memory/,$(MEMORY_SRC)) \
 					$(addprefix path/,$(PATH_SRC)) \
-					$(addprefix rbtree/,$(RBTREE_SRC)) \
+					$(addprefix avltree/,$(AVLTREE_SRC)) \
 					$(addprefix ft_string/,$(FT_STRING_SRC))
 
 
