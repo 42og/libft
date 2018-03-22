@@ -6,7 +6,7 @@
 /*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/22 16:35:31 by mdeville          #+#    #+#             */
-/*   Updated: 2018/03/22 17:51:30 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/03/22 21:26:57 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ t_avltree			*rotate_left_right(t_avltree *x)
 	t_avltree *y;
 	t_avltree *z;
 
-	if (!x || !(y = x->left) || !(x = x->left))
+	if (!x || !(y = x->left) || !(z = y->left))
 		return (x);
 	z->parent = x->parent;
 	x->parent = z;
