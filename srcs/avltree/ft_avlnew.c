@@ -6,7 +6,7 @@
 /*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 21:51:04 by mdeville          #+#    #+#             */
-/*   Updated: 2018/03/21 19:00:16 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/03/22 16:34:53 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ t_avltree	*ft_avlnew(void const *content, size_t content_size)
 	new_elem->parent = NULL;
 	new_elem->left = NULL;
 	new_elem->right = NULL;
-	new_elem->factor = 0;
+	new_elem->factor = AVL_BALANCED;
 	return (new_elem);
 }
