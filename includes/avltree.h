@@ -6,7 +6,7 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/17 15:19:28 by mdeville          #+#    #+#             */
-/*   Updated: 2018/03/22 21:32:23 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/03/23 00:40:28 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,12 @@
 # define AVLTREE_H
 
 # include <unistd.h>
-# define AVL_LFT_HEAVY -1
-# define AVL_RGT_HEAVY 1
-# define AVL_BALANCED 0
 
 typedef struct			s_avltree
 {
 	void				*content;
 	size_t				content_size;
-	int					factor;
+	int					height;
 	struct s_avltree	*left;
 	struct s_avltree	*right;
 	struct s_avltree	*parent;
@@ -32,8 +29,11 @@ typedef struct			s_avltree
 ** Utilities
 */
 
-size_t					ft_avlsize(t_avltree *root);
-size_t					ft_avlheight(t_avltree *root);
+int						max(int a, int b);
+int						get_balance(t_avltree *node);
+int						ft_avlmax(t_avltree *node);
+int						ft_avlsize(t_avltree *root);
+int						ft_avlheight(t_avltree *node);
 
 /*
 ** Rotate

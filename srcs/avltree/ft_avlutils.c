@@ -6,31 +6,34 @@
 /*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/20 18:07:39 by mdeville          #+#    #+#             */
-/*   Updated: 2018/03/21 18:58:14 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/03/23 00:40:34 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "avltree.h"
 
-size_t	ft_avlsize(t_avltree *root)
+int		max(int a, int b)
+{
+	return ((a >= b) ? a : b);
+}
+
+int		ft_avlsize(t_avltree *root)
 {
 	if (!root || (!root->left && !root->right))
 		return (0);
 	return (ft_avlsize(root->left) + ft_avlsize(root->right) + 1);
 }
 
-size_t	ft_avlheight(t_avltree *root)
+int		ft_avlheight(t_avltree *node)
 {
-	size_t	r_height;
-	size_t	l_height;
-
-	if (!root)
+	if (!node)
 		return (0);
-	else if (!root->left && !root->right)
-		return (1);
-	r_height = ft_avlheight(root->left);
-	l_height = ft_avlheight(root->right);
-	if (r_height > l_height)
-		return (r_height + 1);
-	return (l_height + 1);
+	return (node->height);
+}
+
+int		get_balance(t_avltree *node)
+{
+	if (!node)
+		return (0);
+	return (ft_avlheight(node->left) - ft_avlheight(node->right));
 }
