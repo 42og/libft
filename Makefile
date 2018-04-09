@@ -6,7 +6,11 @@
 #    By: tvallee <tvallee@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/12/10 14:41:44 by tvallee           #+#    #+#              #
+<<<<<<< HEAD
 #    Updated: 2018/04/09 18:51:38 by mdeville         ###   ########.fr        #
+=======
+#    Updated: 2018/03/23 03:51:40 by mdeville         ###   ########.fr        #
+>>>>>>> 7814c5bd09c89ebb51d35c08bb3e0e818755f5e5
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,10 +67,11 @@ MEMORY_SRC      =	ft_bzero.c ft_memalloc.c ft_memccpy.c ft_memchr.c \
 
 PATH_SRC        =	ft_basename.c ft_dirname.c
 
-AVLTREE_SRC     =	ft_avlnew.c ft_avlutils.c ft_avlinsert.c ft_avlrotate.c
-
 HASH_SRC        =	hshtbl_init.c hshtbl_insert.c hshtbl_lookup.c \
 					hshtbl_remove.c hshtbl_size.c
+
+AVLTREE_SRC      =	ft_avlnew.c ft_avlutils.c ft_avlinsert.c ft_avlrotate.c \
+					ft_avldel.c
 
 FT_STRING_SRC   =	ft_stpncpy.c ft_str_is_alpha.c ft_str_is_lowercase.c \
 					ft_str_is_numeric.c ft_str_is_printable.c \

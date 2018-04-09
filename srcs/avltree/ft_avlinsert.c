@@ -6,17 +6,16 @@
 /*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/20 17:59:12 by mdeville          #+#    #+#             */
-/*   Updated: 2018/03/23 01:19:26 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/03/23 03:06:54 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "avltree.h"
-#include <stdio.h>
 
 static t_avltree	*insert(
-						t_avltree *root,
-						t_avltree *node,
-						int (*f)(void *, void *))
+							t_avltree *root,
+							t_avltree *node,
+							int (*f)(void *, void *))
 {
 	int balance;
 	int cmp;
@@ -45,10 +44,10 @@ static t_avltree	*insert(
 	return (root);
 }
 
-void			ft_avlinsert(
-						t_avltree **root,
-						t_avltree *node,
-						int (*f)(void *, void *))
+void				ft_avlinsert(
+							t_avltree **root,
+							t_avltree *node,
+							int (*f)(void *, void *))
 {
 	if (!root || !node)
 		return ;
