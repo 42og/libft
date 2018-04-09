@@ -6,7 +6,7 @@
 #    By: tvallee <tvallee@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/12/10 14:41:44 by tvallee           #+#    #+#              #
-#    Updated: 2018/03/23 00:20:16 by mdeville         ###   ########.fr        #
+#    Updated: 2018/04/09 18:51:38 by mdeville         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,7 +63,10 @@ MEMORY_SRC      =	ft_bzero.c ft_memalloc.c ft_memccpy.c ft_memchr.c \
 
 PATH_SRC        =	ft_basename.c ft_dirname.c
 
-AVLTREE_SRC      =	ft_avlnew.c ft_avlutils.c ft_avlinsert.c ft_avlrotate.c
+AVLTREE_SRC     =	ft_avlnew.c ft_avlutils.c ft_avlinsert.c ft_avlrotate.c
+
+HASH_SRC        =	hshtbl_init.c hshtbl_insert.c hshtbl_lookup.c \
+					hshtbl_remove.c hshtbl_size.c
 
 FT_STRING_SRC   =	ft_stpncpy.c ft_str_is_alpha.c ft_str_is_lowercase.c \
 					ft_str_is_numeric.c ft_str_is_printable.c \
@@ -79,7 +82,8 @@ FT_STRING_SRC   =	ft_stpncpy.c ft_str_is_alpha.c ft_str_is_lowercase.c \
 					ft_strsplit_str.c
 
 SRCDIRS         =	conversion/ ft_ctype/ dlst/ ft_getopt/ ft_io/ ft_printf/ \
-					get_next_line/ lst/ memory/ path/ avltree/ ft_string/
+					get_next_line/ lst/ memory/ path/ avltree/ ft_string/ \
+					hash/
 
 SRC             =	$(addprefix conversion/,$(CONVERSION_SRC)) \
 					$(addprefix ft_ctype/,$(FT_CTYPE_SRC)) \
@@ -92,7 +96,8 @@ SRC             =	$(addprefix conversion/,$(CONVERSION_SRC)) \
 					$(addprefix memory/,$(MEMORY_SRC)) \
 					$(addprefix path/,$(PATH_SRC)) \
 					$(addprefix avltree/,$(AVLTREE_SRC)) \
-					$(addprefix ft_string/,$(FT_STRING_SRC))
+					$(addprefix ft_string/,$(FT_STRING_SRC)) \
+					$(addprefix hash/, $(HASH_SRC))
 
 
 CFLAGS         += -I$(INCDIR)
