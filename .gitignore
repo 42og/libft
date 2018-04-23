@@ -3,3 +3,4 @@ a.out
 *.d
 libft.a
 main.c
+test*

@@ -6,7 +6,7 @@
 /*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/09 17:03:21 by mdeville          #+#    #+#             */
-/*   Updated: 2018/04/09 18:35:08 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/04/11 16:44:09 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	hshtbl_insert(
 	unsigned int	hash;
 	t_list			*tmp;
 
-	if (!tbl || !data)
+	if (!tbl || !data || !tbl->buckets)
 		return ;
 	hash = tbl->hash(data) % tbl->buckets;
 	if (hshtbl_lookup(tbl, data) || !(tmp = ft_lstnew(data, content_size)))
