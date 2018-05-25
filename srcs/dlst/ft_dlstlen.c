@@ -6,7 +6,7 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/19 20:17:31 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/22 16:43:23 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/05/24 23:52:15 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_dlstlen(t_dlist *list)
 	i = 0;
 	while (list)
 	{
-		i++;
+		i += 1;
 		list = list->next;
 	}
 	return (i);

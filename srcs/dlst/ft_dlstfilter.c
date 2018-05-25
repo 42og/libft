@@ -6,7 +6,7 @@
 /*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 16:08:29 by mdeville          #+#    #+#             */
-/*   Updated: 2018/02/12 14:50:34 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/05/24 23:49:34 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static inline void	ft_trimhead(
 {
 	t_dlist *tmp;
 
-	while (!(*p)(*alst))
+	while (*alst && !(*p)(*alst))
 	{
 		tmp = *alst;
 		*alst = (*alst)->next;
