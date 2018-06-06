@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dlst_to_tab.c                                   :+:      :+:    :+:   */
+/*   ft_tab_to_dlst.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/22 20:02:04 by mdeville          #+#    #+#             */
-/*   Updated: 2018/06/07 01:56:45 by mdeville         ###   ########.fr       */
+/*   Created: 2018/06/07 01:20:25 by mdeville          #+#    #+#             */
+/*   Updated: 2018/06/07 01:49:22 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "memory.h"
 #include "dlst.h"
 
-void	*ft_dlst_to_tab(t_dlist *lst)
+t_dlist		*ft_tab_to_dlst(void *tab, size_t nmemb, size_t size)
 {
-	size_t	len;
-	void	*res;
 	char	*p;
+	t_dlist	*res;
 
-	if (!lst)
-		return (NULL);
-	len = ft_dlstlen(lst);
-	if (!(res = (char *)malloc(lst->content_size * (len + 1))))
-		return (NULL);
-	p = (char *)res;
-	while (lst)
+	res = NULL;
+	p = (char *)tab;
+	while (size)
 	{
-		ft_memcpy(p, lst->content, lst->content_size);
-		p += lst->content_size;
-		lst = lst->next;
+		ft_dlstprepend(&res, ft_dlstnew(p, nmemb));
+		p += nmemb;
+		size--;
 	}
+	ft_dlstreverse(&res);
 	return (res);
 }

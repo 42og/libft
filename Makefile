@@ -6,7 +6,7 @@
 #    By: tvallee <tvallee@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/12/10 14:41:44 by tvallee           #+#    #+#              #
-#    Updated: 2018/04/23 15:26:21 by mdeville         ###   ########.fr        #
+#    Updated: 2018/06/07 01:26:57 by mdeville         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,9 @@ ARFLAGS         = -rcs
 .SUFFIXES: .c .o .d
 
 # list all sources
+
+ARRAY_SRC       =	ft_tab_to_dlst.c
+
 CONVERSION_SRC  =	ft_atoi.c ft_atou.c ft_atoimax.c ft_itoa.c ft_utoa.c \
 					ft_utoa_base.c
 
@@ -84,9 +87,10 @@ FT_STRING_SRC   =	ft_stpncpy.c ft_str_is_alpha.c ft_str_is_lowercase.c \
 
 SRCDIRS         =	conversion/ ft_ctype/ dlst/ ft_getopt/ ft_io/ ft_printf/ \
 					get_next_line/ lst/ memory/ path/ avltree/ ft_string/ \
-					hash/
+					hash/ array/
 
-SRC             =	$(addprefix conversion/,$(CONVERSION_SRC)) \
+SRC             =	$(addprefix array/, $(ARRAY_SRC)) \
+					$(addprefix conversion/,$(CONVERSION_SRC)) \
 					$(addprefix ft_ctype/,$(FT_CTYPE_SRC)) \
 					$(addprefix dlst/,$(DLST_SRC)) \
 					$(addprefix ft_getopt/,$(FT_GETOPT_SRC)) \
