@@ -6,7 +6,7 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/07 01:14:41 by mdeville          #+#    #+#             */
-/*   Updated: 2018/06/07 03:44:21 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/06/07 11:44:44 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ static inline void	*tab_at(void *tab, size_t nmemb, size_t index)
 	return (tab + (nmemb * index));
 }
 
-static int		partition(
-					void *base,
-					size_t nmemb,
-					size_t size,
-					int (*compar)(const void *, const void *))
+static int			partition(
+							void *base,
+							size_t nmemb,
+							size_t size,
+							int (*compar)(const void *, const void *))
 {
 	size_t	i;
 	size_t	j;
@@ -49,11 +49,11 @@ static int		partition(
 	return (j);
 }
 
-void	ft_qsort(
-				void *base,
-				size_t nmemb,
-				size_t size,
-				int (*compar)(const void *, const void *))
+void				ft_qsort(
+							void *base,
+							size_t nmemb,
+							size_t size,
+							int (*compar)(const void *, const void *))
 {
 	char	*tmp;
 	size_t	pivot;

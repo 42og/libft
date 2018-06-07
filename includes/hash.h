@@ -6,7 +6,7 @@
 /*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/09 15:00:31 by mdeville          #+#    #+#             */
-/*   Updated: 2018/04/09 18:36:33 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/06/07 11:43:34 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ typedef struct		s_hshtbl {
 	void			(*destroy)(void *);
 	int				(*cmp)(const void *, const void *);
 }					t_hshtbl;
-
 
 t_hshtbl			*hshtbl_init(
 								size_t buckets,
