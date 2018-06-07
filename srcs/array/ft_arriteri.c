@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tab_to_dlst.c                                   :+:      :+:    :+:   */
+/*   ft_arriteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/07 01:20:25 by mdeville          #+#    #+#             */
-/*   Updated: 2018/06/07 15:51:46 by mdeville         ###   ########.fr       */
+/*   Created: 2018/06/07 16:11:01 by mdeville          #+#    #+#             */
+/*   Updated: 2018/06/07 16:14:07 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "dlst.h"
+#include <stddef.h>
 
-t_dlist		*ft_tab_to_dlst(void *tab, size_t nmemb, size_t size)
+void	ft_arriter(
+					void *array,
+					size_t nmemb,
+					size_t size,
+					void (*f)(void *, size_t))
 {
 	char	*p;
-	t_dlist	*res;
+	size_t	i;
 
-	if (!tab || !nmemb || !size)
-		return (NULL);
-	res = NULL;
-	p = (char *)tab;
+	if (!array || !size || !nmemb || !f)
+		return ;
+	p = (char *)array;
+	i = 0;
 	while (size)
 	{
-		ft_dlstprepend(&res, ft_dlstnew(p, nmemb));
+		f(p, i);
 		p += nmemb;
-		size--;
+		size -= 1;
+		i += 1;
 	}
-	ft_dlstreverse(&res);
-	return (res);
 }

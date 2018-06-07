@@ -6,7 +6,7 @@
 #    By: tvallee <tvallee@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/12/10 14:41:44 by tvallee           #+#    #+#              #
-#    Updated: 2018/06/07 15:24:44 by mdeville         ###   ########.fr        #
+#    Updated: 2018/06/07 16:16:37 by mdeville         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,8 @@ ARFLAGS         = -rcs
 
 # list all sources
 
-ARRAY_SRC       =	ft_arr_to_dlst.c ft_qsort.c ft_arriter.c
+ARRAY_SRC       =	ft_arr_to_dlst.c ft_qsort.c ft_arriter.c ft_arriteri.c \
+					ft_arrmap.c ft_arrmapi.c
 
 CONVERSION_SRC  =	ft_atoi.c ft_atou.c ft_atoimax.c ft_itoa.c ft_utoa.c \
 					ft_utoa_base.c

@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_arriter.c                                       :+:      :+:    :+:   */
+/*   ft_arrmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/07 15:15:27 by mdeville          #+#    #+#             */
-/*   Updated: 2018/06/07 15:50:52 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/06/07 15:50:14 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include <stdlib.h>
+#include "memory.h"
 
-void	ft_arriter(void *array, size_t nmemb, size_t size, void (*f)(void *))
+void	*ft_arrmap(void *array, size_t nmemb, size_t size, void *(*f)(void *))
 {
 	char *p;
+	char *p2;
+	void *res;
 
-	if (!array || !size || !nmemb || !f)
-		return ;
+	if (!array || !size || !nmemb || !f || !(res = malloc(nmemb * size)))
+		return (NULL);
+	p2 = (char *)res;
 	p = (char *)array;
 	while (size)
 	{
-		f(p);
+		ft_memcpy(p2, f(p), nmemb);
 		p += nmemb;
+		p2 += nmemb;
 		size -= 1;
 	}
+	return (res);
 }

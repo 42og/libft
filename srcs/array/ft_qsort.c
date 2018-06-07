@@ -6,7 +6,7 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/07 01:14:41 by mdeville          #+#    #+#             */
-/*   Updated: 2018/06/07 11:44:44 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/06/07 15:52:28 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void				ft_qsort(
 	char	*tmp;
 	size_t	pivot;
 
-	if (size <= 1)
+	if (size <= 1 || !base || !nmemb || !compar)
 		return ;
 	if (size == 2)
 	{
