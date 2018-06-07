@@ -6,7 +6,7 @@
 #    By: tvallee <tvallee@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/12/10 14:41:44 by tvallee           #+#    #+#              #
-#    Updated: 2018/06/07 01:26:57 by mdeville         ###   ########.fr        #
+#    Updated: 2018/06/07 02:19:49 by mdeville         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,7 +62,8 @@ LST_SRC         =	ft_lstadd.c ft_lstdel.c ft_lstdelone.c ft_lstfilter.c \
 					ft_lstappend.c
 
 MEMORY_SRC      =	ft_bzero.c ft_memalloc.c ft_memccpy.c ft_memchr.c \
-					ft_memcmp.c ft_memcpy.c ft_memdel.c ft_memmove.c ft_memset.c
+					ft_memcmp.c ft_memcpy.c ft_memdel.c ft_memmove.c \
+					ft_memset.c ft_memswap.c
 
 PATH_SRC        =	ft_basename.c ft_dirname.c
 

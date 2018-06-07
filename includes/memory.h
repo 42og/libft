@@ -6,7 +6,7 @@
 /*   By: mdeville <mdeville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/17 15:22:32 by mdeville          #+#    #+#             */
-/*   Updated: 2018/01/18 10:45:54 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/06/07 02:19:04 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ void				*ft_memcpy(void *dest, const void *src, size_t n);
 void				ft_memdel(void **ap);
 void				*ft_memmove(void *dest, const void *src, size_t len);
 void				*ft_memset(void *s, int c, size_t n);
+void				ft_memswap(void *s1, void *s2, size_t n);
 
 #endif
