@@ -1,31 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstpop.c                                        :+:      :+:    :+:   */
+/*   thpool.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 18:27:57 by mdeville          #+#    #+#             */
-/*   Updated: 2018/06/11 16:40:27 by mdeville         ###   ########.fr       */
+/*   Created: 2018/06/11 17:01:06 by mdeville          #+#    #+#             */
+/*   Updated: 2018/06/11 18:05:20 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "dlst.h"
-#include <stdlib.h>
+#ifndef THPOOL_H
+# define THPOOL_H
 
-t_dlist	*ft_dlstpop(t_dlist **alst)
+# include <pthread.h>
+# include "dlst.h"
+
+typedef struct	s_jobqueue
 {
-	t_dlist	*res;
+	pthread_mutex_t	job_mutex;
+	t_dlist			*front;
+	t_dlist			*back;
+	size_t			len;
+}				t_jobqueue;
 
-	if (!alst || !*alst)
-		return (NULL);
-	if ((*alst)->prev)
-		(*alst)->prev->next = (*alst)->next;
-	if ((*alst)->next)
-		(*alst)->next->prev = (*alst)->prev;
-	res = *alst;
-	*alst = (*alst)->next;
-	res->next = NULL;
-	res->prev = NULL;
-	return (res);
-}
+typedef struct	s_thpool
+{
+	pthread_mutex_t	pool_mutex;
+	int				nb_th_alive;
+	int				nb_th_working;
+	t_jobqueue		jobs;
+	pthread_t		*threads;
+}				t_thpool;
+
+t_thpool	*thpool_init(size_t nb_thread);
+
+#endif
