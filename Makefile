@@ -6,7 +6,7 @@
 #    By: tvallee <tvallee@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/12/10 14:41:44 by tvallee           #+#    #+#              #
-#    Updated: 2018/06/08 13:26:43 by mdeville         ###   ########.fr        #
+#    Updated: 2018/06/12 17:57:32 by mdeville         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,8 @@ ARFLAGS         = -rcs
 .SUFFIXES: .c .o .d
 
 # list all sources
+
+THPOOL_SRC      =	bsem.c jobqueue.c thpool_init.c thpool_destroy.c
 
 ARRAY_SRC       =	ft_arr_to_dlst.c ft_qsort.c ft_arriter.c ft_arriteri.c \
 					ft_arrmap.c ft_arrmapi.c
@@ -89,9 +91,10 @@ FT_STRING_SRC   =	ft_stpncpy.c ft_str_is_alpha.c ft_str_is_lowercase.c \
 
 SRCDIRS         =	conversion/ ft_ctype/ dlst/ ft_getopt/ ft_io/ ft_printf/ \
 					get_next_line/ lst/ memory/ path/ avltree/ ft_string/ \
-					hash/ array/
+					hash/ array/ thpool/
 
-SRC             =	$(addprefix array/, $(ARRAY_SRC)) \
+SRC             =	$(addprefix thpool/, $(THPOOL_SRC)) \
+					$(addprefix array/, $(ARRAY_SRC)) \
 					$(addprefix conversion/,$(CONVERSION_SRC)) \
 					$(addprefix ft_ctype/,$(FT_CTYPE_SRC)) \
 					$(addprefix dlst/,$(DLST_SRC)) \

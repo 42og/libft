@@ -1,35 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstpop.c                                        :+:      :+:    :+:   */
+/*   thpool_destroy.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 18:27:57 by mdeville          #+#    #+#             */
-/*   Updated: 2018/06/12 18:58:45 by mdeville         ###   ########.fr       */
+/*   Created: 2018/06/12 14:58:11 by mdeville          #+#    #+#             */
+/*   Updated: 2018/06/12 15:15:02 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "dlst.h"
+#include <pthread.h>
 #include <stdlib.h>
+#include "thpool.h"
 
-t_dlist	*ft_dlstpop(t_dlist **alst)
+void	thpool_destroy(t_thpool *pool)
 {
-	t_dlist	*res;
-
-	if (!alst || !*alst)
-		return (NULL);
-	res = *alst;
-	if ((*alst)->prev)
-		(*alst)->prev->next = (*alst)->next;
-	if ((*alst)->next)
-	{
-		(*alst)->next->prev = (*alst)->prev;
-		*alst = (*alst)->next;
-	}
-	else
-		*alst = (*alst)->prev;
-	res->next = NULL;
-	res->prev = NULL;
-	return (res);
+	pool->keep_alive = 0;
+	while (pool->nb_th_alive)
+		bsem_post_all(&pool->jobs.has_jobs);
+	free(pool->threads);
+	free(pool);
 }
