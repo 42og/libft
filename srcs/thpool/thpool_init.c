@@ -6,7 +6,7 @@
 /*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/11 18:04:13 by mdeville          #+#    #+#             */
-/*   Updated: 2018/06/12 18:42:41 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/09/10 14:58:15 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,8 @@ static void	*thread_do(t_thpool *pool)
 			exec_job(&pool->jobs);
 			pthread_mutex_lock(&pool->pool_mutex);
 			pool->nb_th_working -= 1;
-			if (!pool->nb_th_working) {
+			if (!pool->nb_th_working)
+			{
 				pthread_cond_signal(&pool->pool_cond);
 			}
 			pthread_mutex_unlock(&pool->pool_mutex);
@@ -93,7 +94,7 @@ t_thpool	*thpool_init(size_t nb_thread)
 	if (!nb_thread || !(pool = (t_thpool *)malloc(sizeof(t_thpool))))
 		return (NULL);
 	if (!jobqueue_init(&pool->jobs)
-			|| !(pool->threads = (pthread_t *)malloc(sizeof(pthread_t) * nb_thread)))
+	|| !(pool->threads = (pthread_t *)malloc(sizeof(pthread_t) * nb_thread)))
 	{
 		free(pool);
 		return (NULL);

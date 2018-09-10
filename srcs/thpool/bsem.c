@@ -6,7 +6,7 @@
 /*   By: mdeville <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/12 14:53:26 by mdeville          #+#    #+#             */
-/*   Updated: 2018/06/12 15:17:27 by mdeville         ###   ########.fr       */
+/*   Updated: 2018/09/10 14:57:33 by mdeville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 void	bsem_wait(t_bsem *bsem_p)
 {
 	pthread_mutex_lock(&bsem_p->mutex);
-	while (bsem_p->v != 1) {
+	while (bsem_p->v != 1)
+	{
 		pthread_cond_wait(&bsem_p->cond, &bsem_p->mutex);
 	}
 	bsem_p->v = 0;
