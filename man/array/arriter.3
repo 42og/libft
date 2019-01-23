@@ -1,0 +1,55 @@
+.TH FT_ARRITER 3 "23 Jan. 2019" srcs/array/ft_arriter.c
+.SH NAME
+ft_arriter, ft_arriteri \- iterate over an array
+.SH SYNOPSIS
+.nf
+.B #include "array.h"
+.PP
+.BI "void ft_arriter(void *" base ", size_t " nmemb ", size_t " size ,
+.BI "              void (*" f ")(void *));"
+.PP
+.BI "void ft_arriteri(void *" base ", size_t " nmemb ", size_t " size ,
+.BI "              void (*" f ")(void *, size_t));"
+.fi
+.PP
+.in
+.SH DESCRIPTION
+The
+.BR ft_arriter()
+function applies the function \fIf\fP to an array \fIbase\fP of
+\fIsize\fP elements.
+The \fInmemb\fP parameter is the size in bytes
+of a single element, passed most of the time through the
+.BR sizeof
+macro.
+.PP
+The
+.BR ft_arriteri()
+function is identical to
+.BR ft_arriter()
+except that it also passes an index to the function \fIf\fP,
+the index being the second parameter to that function.
+.PP
+If any of those parameters is equal to 0 or NULL, the function does nothing.
+.SH EXAMPLE
+The following program will print any arguments passed to it with the
+.BR puts (3)
+function:
+.PP
+.EX
+#include <stdio.h>
+#include "array.h"
+
+void func(void *p)
+{
+	char **s;
+
+	s = (char **)p;
+	puts(*s);
+}
+
+int main(int argc, char *argv[])
+{
+	ft_arriter(argv, sizeof(char *), argc, func);
+	return (0);
+}
