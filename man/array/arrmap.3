@@ -1,0 +1,73 @@
+.TH FT_ARRMAP 3 "23 Jan. 2019" srcs/array
+.SH NAME
+ft_arrmap, ft_arrmapi \- map a function over an array
+.SH SYNOPSIS
+.nf
+.B #include \&"array.h"
+.PP
+.BI "void ft_arrmap(void *" base ", size_t " nmemb ", size_t " size ,
+.BI "              void *(*" f ")(void *));"
+.PP
+.BI "void ft_arrmapi(void *" base ", size_t " nmemb ", size_t " size ,
+.BI "              void *(*" f ")(void *, size_t));"
+.fi
+.PP
+.in
+.SH DESCRIPTION
+The
+.BR ft_arrmap()
+function applies the function \fIf\fP to an array \fIbase\fP of
+\fIsize\fP elements, and returns a new array with the new values.
+The \fInmemb\fP parameter is the size in bytes
+of a single element, passed most of the time through the
+.BR sizeof
+macro.
+.PP
+The
+.BR ft_arrmapi()
+function is identical to
+.BR ft_arrmap()
+except that it also passes an index to the function \fIf\fP,
+the index being the second parameter to that function.
+.PP
+If any of those parameters is equal to 0 or NULL, the function does nothing.
+.SH RETURN VALUE
+On success, both functions return a pointer to the newly created array, NULL otherwise.
+The returned array is allocated with
+.BR malloc (3)
+; meaning it has to be
+.BR free (3)
+\&'d.
+.SH NOTE
+Due to C limitations, in ordrer to function as expected you will have to assign the result to
+a static variable and return it's address. See example below for more info.
+.SH EXAMPLE
+The following program multiplies by 2 each element in the array, and prints it with the
+.BR printf (3)
+function:
+.PP
+.EX
+#include <stdio.h>
+#include <stdlib.h>
+#include "array.h"
+
+void *mult_by_2(void *p)
+{
+    static int n;
+
+    n = (*(int *)p) * 2;
+    return (&n);
+}
+
+int main(void)
+{
+    int test[] = {1, 2 , 3, 4, 5, 6, 7, 8, 9, 10};
+    int *out;
+
+    out = (int *)ft_arrmap(test, sizeof(int), 10, mult_by_2);
+
+    for (int i = 0; i < 10; i++)
+        printf("%d\n", out[i]);
+    free(out);
+    return (0);
+}

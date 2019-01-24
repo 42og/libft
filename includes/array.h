@@ -35,16 +35,16 @@ void		ft_arriteri(
 					size_t size,
 					void (*f)(void *, size_t));
 
-void		ft_arrmap(
+void		*ft_arrmap(
 					void *base,
 					size_t nmemb,
 					size_t size,
-					void *(f)(void *));
+					void *(*f)(void *));
 
-void		ft_arrmapi(
+void		*ft_arrmapi(
 					void *base,
 					size_t nmemb,
 					size_t size,
-					void *(f)(void *, size_t i));
+					void *(*f)(void *, size_t i));
 
 #endif

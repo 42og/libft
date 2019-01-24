@@ -14,16 +14,16 @@
 #include <stdlib.h>
 #include "memory.h"
 
-void	*ft_arrmap(void *array, size_t nmemb, size_t size, void *(*f)(void *))
+void	*ft_arrmap(void *base, size_t nmemb, size_t size, void *(*f)(void *))
 {
 	char *p;
 	char *p2;
 	void *res;
 
-	if (!array || !size || !nmemb || !f || !(res = malloc(nmemb * size)))
+	if (!base || !size || !nmemb || !f || !(res = malloc(nmemb * size)))
 		return (NULL);
 	p2 = (char *)res;
-	p = (char *)array;
+	p = (char *)base;
 	while (size)
 	{
 		ft_memcpy(p2, f(p), nmemb);

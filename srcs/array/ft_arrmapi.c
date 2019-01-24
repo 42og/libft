@@ -15,7 +15,7 @@
 #include "memory.h"
 
 void	*ft_arrmap(
-				void *array,
+				void *base,
 				size_t nmemb,
 				size_t size,
 				void *(*f)(void *, size_t))
@@ -25,10 +25,10 @@ void	*ft_arrmap(
 	void	*res;
 	size_t	i;
 
-	if (!array || !size || !nmemb || !f || !(res = malloc(nmemb * size)))
+	if (!base || !size || !nmemb || !f || !(res = malloc(nmemb * size)))
 		return (NULL);
 	p2 = (char *)res;
-	p = (char *)array;
+	p = (char *)base;
 	i = 0;
 	while (size)
 	{
